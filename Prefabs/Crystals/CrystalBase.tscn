@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://ci6go7wkge0wl"]
+
+[ext_resource type="Script" path="res://Scripts/CrystalController.gd" id="1_3ibw8"]
+[ext_resource type="Texture2D" uid="uid://bjxxexcvbksmj" path="res://Assets/Sprites/Crystals/idle00.png" id="1_ugmhb"]
+[ext_resource type="Texture2D" uid="uid://bw8nds5khxmtg" path="res://Assets/Sprites/Crystals/idle01.png" id="2_gwugd"]
+[ext_resource type="Texture2D" uid="uid://bu84sp21f5xr6" path="res://Assets/Sprites/Crystals/idle02.png" id="3_8jinw"]
+[ext_resource type="Texture2D" uid="uid://buhnclwlqct6y" path="res://Assets/Sprites/Crystals/idle03.png" id="4_kdl46"]
+[ext_resource type="Texture2D" uid="uid://d3tuv5s8n10uj" path="res://Assets/Sprites/Crystals/idle04.png" id="5_2awja"]
+[ext_resource type="Texture2D" uid="uid://ns4ks562t42a" path="res://Assets/Sprites/Crystals/idle05.png" id="6_6qxx1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ynpvh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ugmhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gwugd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8jinw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kdl46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2awja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6qxx1")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dhwfq"]
+
+[node name="CrystalBase" type="Area2D" groups=["Pickup"]]
+script = ExtResource("1_3ibw8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ynpvh")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.917116
+speed_scale = 0.5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+scale = Vector2(0.8, 1.454)
+shape = SubResource("CircleShape2D_dhwfq")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

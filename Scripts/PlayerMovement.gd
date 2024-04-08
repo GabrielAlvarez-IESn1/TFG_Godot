@@ -1,4 +1,3 @@
-class_name PlayerController
 extends CharacterBody2D
 
 const JUMP_VELOCITY = -400.0
@@ -7,9 +6,7 @@ const JUMP_BUFFER_TIME = 0.1
 
 @onready var spawnTimer = $SpawnTimer
 
-var animated_sprite : AnimatedSprite2D
 var animation_tree : AnimationTree
-var animation_player : AnimationPlayer
 var state_machine : AnimationNodeStateMachinePlayback
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -24,10 +21,8 @@ func _ready():
 	slide_on_ceiling = true
 
 	# Animations
-	animated_sprite = $AnimatedSprite2D
 	animation_tree = $AnimationTree
 	animation_tree.active = true
-	animation_player = $AnimationPlayer
 	state_machine = animation_tree.get("parameters/playback")
 	animation_tree.connect("animation_finished", self._on_animation_finished)
 
@@ -36,6 +31,9 @@ func _ready():
 	await spawnTimer.timeout
 	animation_tree.set("parameters/conditions/is_spawned", true)
 	set_physics_process(true)
+
+	# Handle the crystal pickup
+	connect("crystal_picked_up", self._on_crystal_picked_up)
 
 
 func _physics_process(delta):
@@ -77,9 +75,9 @@ func _physics_process(delta):
 			velocity.x = direction * movement_speed
 
 			if direction < 0:
-				animated_sprite.flip_h = true
+				$AnimatedSprite2D.flip_h = true
 			else:
-				animated_sprite.flip_h = false
+				$AnimatedSprite2D.flip_h = false
 		else:
 				velocity.x = move_toward(velocity.x, 0, movement_speed)
 
@@ -112,6 +110,7 @@ func _input(event):
 	if event.is_action_pressed("WASD_EXIT"):
 		get_tree().quit()
 
+
 # Update the animation parameters
 func _update_animation_parameters():
 	animation_tree.set("parameters/conditions/idle", velocity.x == 0 and is_on_floor())
@@ -119,8 +118,24 @@ func _update_animation_parameters():
 	animation_tree.set("parameters/conditions/jumping", not is_on_floor() and velocity.y < 0)
 	animation_tree.set("parameters/conditions/falling", not is_on_floor() and velocity.y >= 0)
 
+
+# Handle the animation finished signal
 func _on_animation_finished(anim_name):
 	if anim_name == "Attack1" and not state_machine.get_current_node() == "Attack2":
 		is_attacking = false
 	elif anim_name == "Attack2":
 		is_attacking = false
+
+
+# Handle the crystal pickup signal
+func _on_crystal_picked_up(crystal_type):
+	match crystal_type:
+		"CrystalRed":
+			pass
+		"CrystalGreen":
+			pass
+		"CrystalBlue":
+			pass
+		_:
+			print("Unknown crystal type: ", crystal_type)
+
