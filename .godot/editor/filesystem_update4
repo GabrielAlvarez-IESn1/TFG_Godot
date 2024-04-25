@@ -1,9 +1,3 @@
 res://Scenes/GameScene.tscn
 res://Scripts/PlayerMovement.gd
 res://Animators/PlayerStateAnimator.tres
-res://Prefabs/Player.tscn
-res://Prefabs/Crystals/CrystalBase.tscn
-res://Prefabs/Crystals/CrystalRed.tscn
-res://Prefabs/Crystals/CrystalGreen.tscn
-res://Prefabs/Crystals/CrystalBlue.tscn
-res://Scenes/SheilaMap.tscn

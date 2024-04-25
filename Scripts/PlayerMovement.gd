@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -600.0
 const COYOTE_TIME = 0.1
 const JUMP_BUFFER_TIME = 0.1
 
@@ -9,12 +9,13 @@ const JUMP_BUFFER_TIME = 0.1
 var animation_tree : AnimationTree
 var state_machine : AnimationNodeStateMachinePlayback
 
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 1.5
 var coyote_timer = 0.0
 var is_attacking = false
-var movement_speed = 200.0
+var movement_speed = 300.0
 var jump_buffer_timer = 0.0
 
+var current_card = "none"
 
 func _ready():
 	# Default properties
@@ -32,8 +33,8 @@ func _ready():
 	animation_tree.set("parameters/conditions/is_spawned", true)
 	set_physics_process(true)
 
-	# Handle the crystal pickup
-	connect("crystal_picked_up", self._on_crystal_picked_up)
+	# Connect the crystal taken signal
+	Signals.connect("crystal_taken", self.on_crystal_taken)
 
 
 func _physics_process(delta):
@@ -94,6 +95,24 @@ func _input(event):
 		else:
 			state_machine.travel("Attack2")
 
+	# Handle habilities
+	if event.is_action_pressed("WASD_SECONDARY_ATTACK"):
+		match current_card:
+			"fire":
+				velocity.x = velocity.x * 2
+			"lightning":
+				velocity.y = JUMP_VELOCITY
+			"plant":
+				velocity.x = velocity.x * -2
+			"water":
+				gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+			"none":
+				print("NO CARD AVALIABE")
+			_:
+				print("Unknown card: ", current_card)
+		Signals.emit_signal("card_used", current_card)
+		current_card = "none"
+
 	if event.is_action_pressed("WASD_SPACEBAR"):
 		jump_buffer_timer = JUMP_BUFFER_TIME
 
@@ -127,15 +146,19 @@ func _on_animation_finished(anim_name):
 		is_attacking = false
 
 
-# Handle the crystal pickup signal
-func _on_crystal_picked_up(crystal_type):
+# Handle the crystal taken signal
+func on_crystal_taken(crystal_type):
 	match crystal_type:
 		"CrystalRed":
-			pass
+			current_card = "fire"
+		"CrystalYellow":
+			current_card = "lightning"
 		"CrystalGreen":
-			pass
+			current_card = "plant"
 		"CrystalBlue":
-			pass
+			current_card = "water"
 		_:
-			print("Unknown crystal type: ", crystal_type)
+			current_card = "none"
+
+	print("Current card: ", current_card)
 

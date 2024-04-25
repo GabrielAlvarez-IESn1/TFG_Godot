@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://cs705xb2e2wpu"]
+[gd_scene load_steps=60 format=3 uid="uid://cs705xb2e2wpu"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_copeq"]
 [ext_resource type="Texture2D" uid="uid://b13sbvdxqbwhr" path="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/Fall00.png" id="2_dao4m"]
@@ -47,6 +47,7 @@
 [ext_resource type="Texture2D" uid="uid://bbae0a8x3pova" path="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/SecondAttack01.png" id="31_mymaa"]
 [ext_resource type="Texture2D" uid="uid://cmrjxp6ew50kp" path="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/SecondAttack02.png" id="32_p3jhi"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://b8cxmilvn0d18" path="res://Animators/PlayerStateAnimator.tres" id="33_ys3hb"]
+[ext_resource type="PackedScene" uid="uid://omwosk1a6l4l" path="res://Prefabs/GUI.tscn" id="48_a1g76"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0y456"]
 animations = [{
@@ -512,6 +513,7 @@ _data = {
 script = ExtResource("1_copeq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Player"]]
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0y456")
 animation = &"Spawn"
 autoplay = "Idle"
@@ -520,10 +522,12 @@ frame = 13
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
 visible = false
 position = Vector2(0, 4)
+scale = Vector2(2, 2)
 shape = SubResource("CapsuleShape2D_ua4rb")
 
 [node name="Area2D" type="Area2D" parent="." groups=["Player"]]
 visible = false
+scale = Vector2(2, 2)
 input_pickable = false
 
 [node name="HeartBox" type="CollisionPolygon2D" parent="Area2D" groups=["Player"]]
@@ -537,9 +541,6 @@ libraries = {
 }
 
 [node name="AnimationTree" type="AnimationTree" parent="." groups=["Player"]]
-libraries = {
-"": SubResource("AnimationLibrary_s6lau")
-}
 tree_root = ExtResource("33_ys3hb")
 anim_player = NodePath("../AnimationPlayer")
 parameters/conditions/attacking_once = false
@@ -554,3 +555,17 @@ parameters/conditions/running = false
 wait_time = 1.3
 one_shot = true
 autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -50)
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.1
+drag_right_margin = 0.1
+drag_bottom_margin = 0.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="GUI" parent="Camera2D" instance=ExtResource("48_a1g76")]
