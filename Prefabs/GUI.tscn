@@ -18,7 +18,7 @@ anchors_preset = 0
 offset_right = 960.0
 offset_bottom = 540.0
 
-[node name="Panel1" type="Panel" parent="Control"]
+[node name="PanelFire" type="Panel" parent="Control"]
 visible = false
 layout_mode = 1
 anchors_preset = 7
@@ -34,7 +34,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nhh8i")
 
-[node name="FireCard" type="TextureRect" parent="Control/Panel1"]
+[node name="FireCard" type="TextureRect" parent="Control/PanelFire"]
 layout_mode = 0
 offset_top = 2.0
 offset_right = 70.0
@@ -42,7 +42,7 @@ offset_bottom = 70.0
 texture = ExtResource("1_julbh")
 expand_mode = 1
 
-[node name="Panel2" type="Panel" parent="Control"]
+[node name="PanelLightning" type="Panel" parent="Control"]
 visible = false
 layout_mode = 1
 anchors_preset = 7
@@ -58,7 +58,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nhh8i")
 
-[node name="LightningCard" type="TextureRect" parent="Control/Panel2"]
+[node name="LightningCard" type="TextureRect" parent="Control/PanelLightning"]
 layout_mode = 0
 offset_top = 2.0
 offset_right = 70.0
@@ -66,7 +66,7 @@ offset_bottom = 70.0
 texture = ExtResource("2_eq2hx")
 expand_mode = 1
 
-[node name="Panel3" type="Panel" parent="Control"]
+[node name="PanelPlant" type="Panel" parent="Control"]
 visible = false
 layout_mode = 1
 anchors_preset = 7
@@ -82,7 +82,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nhh8i")
 
-[node name="PlantCard" type="TextureRect" parent="Control/Panel3"]
+[node name="PlantCard" type="TextureRect" parent="Control/PanelPlant"]
 layout_mode = 0
 offset_top = 2.0
 offset_right = 70.0
@@ -90,7 +90,7 @@ offset_bottom = 70.0
 texture = ExtResource("3_oegqi")
 expand_mode = 1
 
-[node name="Panel4" type="Panel" parent="Control"]
+[node name="PanelWater" type="Panel" parent="Control"]
 visible = false
 layout_mode = 1
 anchors_preset = 7
@@ -106,7 +106,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_nhh8i")
 
-[node name="WaterCard" type="TextureRect" parent="Control/Panel4"]
+[node name="WaterCard" type="TextureRect" parent="Control/PanelWater"]
 layout_mode = 0
 offset_top = 2.0
 offset_right = 70.0

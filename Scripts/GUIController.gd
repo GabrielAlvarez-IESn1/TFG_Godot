@@ -1,38 +1,50 @@
 class_name GUIController
 extends CanvasLayer
 
-
 func _ready():
-	Signals.connect("crystal_taken", self.on_crystal_taken)
-	Signals.connect("card_used", self.on_card_used)
-
+	GlobalSignals.connect("crystal_taken", self.on_crystal_taken)
+	GlobalSignals.connect("card_used", self.on_card_used)
 
 # Handle the crystal taken signal
-func on_crystal_taken(crystal_type):
+func on_crystal_taken(crystal_type: GlobalTypes.Crystals):
+	if crystal_type != GlobalTypes.Crystals.NONE:
+		show_card(crystal_type)
+	else:
+		print("GUI: Unknown crystal type: ", crystal_type)
+
+func on_card_used(card_type: GlobalTypes.Cards):
+	if card_type != GlobalTypes.Cards.NONE:
+		hide_card(card_type)
+	else:
+		print("GUI: No card available")
+
+func show_card(crystal_type: GlobalTypes.Crystals):
+	$Control/PanelFire.visible = false
+	$Control/PanelLightning.visible = false
+	$Control/PanelPlant.visible = false
+	$Control/PanelWater.visible = false
+
 	match crystal_type:
-		"CrystalRed":
-			$Control/Panel1.visible = true
-		"CrystalYellow":
-			$Control/Panel2.visible = true
-		"CrystalGreen":
-			$Control/Panel3.visible = true
-		"CrystalBlue":
-			$Control/Panel4.visible = true
-		_:
-			print("Unknown crystal type: ", crystal_type)
+		GlobalTypes.Crystals.FIRE:
+			$Control/PanelFire.visible = true
+		GlobalTypes.Crystals.LIGHTNING:
+			$Control/PanelLightning.visible = true
+		GlobalTypes.Crystals.PLANT:
+			$Control/PanelPlant.visible = true
+		GlobalTypes.Crystals.WATER:
+			$Control/PanelWater.visible = true
+		GlobalTypes.Crystals.NONE:
+			print("GUI: No card to show")
 
-
-func on_card_used(card_type):
+func hide_card(card_type: GlobalTypes.Cards):
 	match card_type:
-		"fire":
-			$Control/Panel1.visible = false
-		"lightning":
-			$Control/Panel2.visible = false
-		"plant":
-			$Control/Panel3.visible = false
-		"water":
-			$Control/Panel4.visible = false
-		"none":
-			print("NO CARD AVAILABLE")
-		_:
-			print("Unknown card: ", card_type)
+		GlobalTypes.Cards.FIRE:
+			$Control/PanelFire.visible = false
+		GlobalTypes.Cards.LIGHTNING:
+			$Control/PanelLightning.visible = false
+		GlobalTypes.Cards.PLANT:
+			$Control/PanelPlant.visible = false
+		GlobalTypes.Cards.WATER:
+			$Control/PanelWater.visible = false
+		GlobalTypes.Cards.NONE:
+			print("GUI: No card to hide")

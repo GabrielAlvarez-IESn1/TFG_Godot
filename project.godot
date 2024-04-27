@@ -17,7 +17,8 @@ config/icon="res://Assets/Sprites/icon.svg"
 
 [autoload]
 
-Signals="*res://Scripts/Globals/Signals.gd"
+GlobalSignals="*res://Scripts/Globals/GlobalSignals.gd"
+GlobalTypes="*res://Scripts/Globals/GlobalTypes.gd"
 
 [display]
 

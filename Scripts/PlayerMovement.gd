@@ -6,16 +6,19 @@ const JUMP_BUFFER_TIME = 0.1
 
 @onready var spawnTimer = $SpawnTimer
 
-var animation_tree : AnimationTree
-var state_machine : AnimationNodeStateMachinePlayback
+var animation_tree: AnimationTree
+var state_machine: AnimationNodeStateMachinePlayback
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 1.5
 var coyote_timer = 0.0
 var is_attacking = false
 var movement_speed = 300.0
 var jump_buffer_timer = 0.0
+var direction = Vector2()
+var is_dashing = false
 
-var current_card = "none"
+var last_card_used = GlobalTypes.Cards.NONE
+var current_card = GlobalTypes.Cards.NONE
 
 func _ready():
 	# Default properties
@@ -34,8 +37,7 @@ func _ready():
 	set_physics_process(true)
 
 	# Connect the crystal taken signal
-	Signals.connect("crystal_taken", self.on_crystal_taken)
-
+	GlobalSignals.connect("crystal_taken", self.on_crystal_taken)
 
 func _physics_process(delta):
 	# Update the animation parameters
@@ -63,27 +65,27 @@ func _physics_process(delta):
 		jump_buffer_timer = 0
 
 	# Get the input direction and handle the movement/deceleration
-	var direction = Input.get_axis("WASD_A", "WASD_D")
+	direction = Input.get_axis("WASD_A", "WASD_D")
 
 	# Move the player
-	if is_attacking:
-		if is_on_floor():
-			velocity.x = lerp(velocity.x, velocity.x * 0.5, 0.1)
-		else:
-			velocity.x = lerp(velocity.x, velocity.x * 0.8, 0.1)
-	else:
-		if direction:
-			velocity.x = direction * movement_speed
-
-			if direction < 0:
-				$AnimatedSprite2D.flip_h = true
+	if not is_dashing:
+		if is_attacking:
+			if is_on_floor():
+				velocity.x = lerp(velocity.x, velocity.x * 0.5, 0.1)
 			else:
-				$AnimatedSprite2D.flip_h = false
+				velocity.x = lerp(velocity.x, velocity.x * 0.8, 0.1)
 		else:
+			if direction:
+				velocity.x = direction * movement_speed
+
+				if direction < 0:
+					$AnimatedSprite2D.flip_h = true
+				else:
+					$AnimatedSprite2D.flip_h = false
+			else:
 				velocity.x = move_toward(velocity.x, 0, movement_speed)
 
 	move_and_slide()
-
 
 # Handle input
 func _input(event):
@@ -97,22 +99,35 @@ func _input(event):
 
 	# Handle habilities
 	if event.is_action_pressed("WASD_SECONDARY_ATTACK"):
-		match current_card:
-			"fire":
-				velocity.x = velocity.x * 2
-			"lightning":
-				velocity.y = JUMP_VELOCITY
-			"plant":
-				velocity.x = velocity.x * -2
-			"water":
-				gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-			"none":
-				print("NO CARD AVALIABE")
-			_:
-				print("Unknown card: ", current_card)
-		Signals.emit_signal("card_used", current_card)
-		current_card = "none"
+		if current_card != last_card_used:
+			last_card_used = current_card
 
+			match current_card:
+				GlobalTypes.Cards.FIRE:
+					movement_speed += 100
+					await (get_tree().create_timer(3.0).timeout)
+					movement_speed -= 100
+				GlobalTypes.Cards.LIGHTNING:
+					velocity.y = JUMP_VELOCITY
+				GlobalTypes.Cards.PLANT:
+					is_dashing = true
+					movement_speed -= 300
+					velocity.x = lerp(velocity.x, velocity.x * 100, 0.1)
+					await (get_tree().create_timer(0.1).timeout)
+					movement_speed += 300
+					is_dashing = false
+				GlobalTypes.Cards.WATER:
+					gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+					await (get_tree().create_timer(3.0).timeout)
+					gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 1.5
+				GlobalTypes.Cards.NONE:
+					print("PM: No card selected")
+				_:
+					print("PM: Unknown card: ", current_card)
+		GlobalSignals.emit_signal("card_used", current_card)
+		current_card = GlobalTypes.Cards.NONE
+
+	# Handle jump buffer
 	if event.is_action_pressed("WASD_SPACEBAR"):
 		jump_buffer_timer = JUMP_BUFFER_TIME
 
@@ -129,6 +144,9 @@ func _input(event):
 	if event.is_action_pressed("WASD_EXIT"):
 		get_tree().quit()
 
+	# DEBUG
+	if event.is_action_pressed("ui_up"):
+		print("PM: Crytal type red?: ", GlobalTypes.Crystals.FIRE)
 
 # Update the animation parameters
 func _update_animation_parameters():
@@ -137,7 +155,6 @@ func _update_animation_parameters():
 	animation_tree.set("parameters/conditions/jumping", not is_on_floor() and velocity.y < 0)
 	animation_tree.set("parameters/conditions/falling", not is_on_floor() and velocity.y >= 0)
 
-
 # Handle the animation finished signal
 func _on_animation_finished(anim_name):
 	if anim_name == "Attack1" and not state_machine.get_current_node() == "Attack2":
@@ -145,20 +162,16 @@ func _on_animation_finished(anim_name):
 	elif anim_name == "Attack2":
 		is_attacking = false
 
-
 # Handle the crystal taken signal
-func on_crystal_taken(crystal_type):
+func on_crystal_taken(crystal_type: GlobalTypes.Crystals):
 	match crystal_type:
-		"CrystalRed":
-			current_card = "fire"
-		"CrystalYellow":
-			current_card = "lightning"
-		"CrystalGreen":
-			current_card = "plant"
-		"CrystalBlue":
-			current_card = "water"
+		GlobalTypes.Crystals.FIRE:
+			current_card = GlobalTypes.Cards.FIRE
+		GlobalTypes.Crystals.LIGHTNING:
+			current_card = GlobalTypes.Cards.LIGHTNING
+		GlobalTypes.Crystals.PLANT:
+			current_card = GlobalTypes.Cards.PLANT
+		GlobalTypes.Crystals.WATER:
+			current_card = GlobalTypes.Cards.WATER
 		_:
-			current_card = "none"
-
-	print("Current card: ", current_card)
-
+			current_card = GlobalTypes.Cards.NONE

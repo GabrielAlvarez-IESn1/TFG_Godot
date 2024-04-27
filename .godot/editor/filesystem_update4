@@ -1,3 +1,9 @@
 res://Scenes/GameScene.tscn
 res://Scripts/PlayerMovement.gd
 res://Animators/PlayerStateAnimator.tres
+res://Prefabs/Player.tscn
+res://Prefabs/GUI.tscn
+res://Scripts/CrystalController.gd
+res://Scripts/GUIController.gd
+res://Scripts/Globals/GlobalTypes.gd
+res://Scripts/Globals/GlobalSignals.gd
