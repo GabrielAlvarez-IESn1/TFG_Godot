@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://cs705xb2e2wpu"]
+[gd_scene load_steps=59 format=3 uid="uid://cs705xb2e2wpu"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_copeq"]
 [ext_resource type="Texture2D" uid="uid://b13sbvdxqbwhr" path="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/Fall00.png" id="2_dao4m"]
@@ -47,7 +47,6 @@
 [ext_resource type="Texture2D" uid="uid://bbae0a8x3pova" path="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/SecondAttack01.png" id="31_mymaa"]
 [ext_resource type="Texture2D" uid="uid://cmrjxp6ew50kp" path="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/SecondAttack02.png" id="32_p3jhi"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://b8cxmilvn0d18" path="res://Animators/PlayerStateAnimator.tres" id="33_ys3hb"]
-[ext_resource type="PackedScene" uid="uid://omwosk1a6l4l" path="res://Prefabs/GUI.tscn" id="48_a1g76"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0y456"]
 animations = [{
@@ -517,7 +516,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0y456")
 animation = &"Spawn"
 autoplay = "Idle"
-frame = 6
+frame = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
 visible = false
@@ -567,5 +566,3 @@ drag_right_margin = 0.1
 drag_bottom_margin = 0.0
 editor_draw_limits = true
 editor_draw_drag_margin = true
-
-[node name="GUI" parent="Camera2D" instance=ExtResource("48_a1g76")]

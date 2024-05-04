@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://rbfkhmeoq52e"]
+[gd_scene load_steps=11 format=3 uid="uid://rbfkhmeoq52e"]
 
 [ext_resource type="Texture2D" uid="uid://d01x8epp0uqd5" path="res://Assets/TileMaps/TranquilTunnels.png" id="2_6gjdq"]
 [ext_resource type="PackedScene" uid="uid://cs705xb2e2wpu" path="res://Prefabs/Player.tscn" id="2_8388w"]
+[ext_resource type="PackedScene" uid="uid://omwosk1a6l4l" path="res://Prefabs/GUI.tscn" id="3_w0eji"]
 [ext_resource type="PackedScene" uid="uid://dy52hmex8kf8c" path="res://Prefabs/Crystals/CrystalBlue.tscn" id="4_ea336"]
 [ext_resource type="PackedScene" uid="uid://boeosgbw6uc7m" path="res://Prefabs/Crystals/CrystalGreen.tscn" id="4_p55mr"]
+[ext_resource type="PackedScene" uid="uid://dhu6072o33ipu" path="res://Menus/PauseMenu.tscn" id="4_s2q3o"]
 [ext_resource type="PackedScene" uid="uid://5h8hbsy6awm5" path="res://Prefabs/Crystals/CrystalRed.tscn" id="5_4gglr"]
 [ext_resource type="PackedScene" uid="uid://djxdkapifttiq" path="res://Prefabs/Crystals/CrystalYellow.tscn" id="6_eqdxb"]
 
@@ -12037,7 +12039,7 @@ sources/1 = SubResource("TileSetAtlasSource_im1jq")
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_8388w")]
-position = Vector2(481, 399)
+position = Vector2(576, 399)
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2(2, 2)
@@ -12045,16 +12047,23 @@ tile_set = SubResource("TileSet_i4cl6")
 format = 2
 layer_0/tile_data = PackedInt32Array(1703937, 2031617, 2, 1769473, 131073, 2, 1835009, 131073, 5, 1900545, 131073, 5, 1966081, 131073, 5, 2031617, 131073, 6, 1703938, 2031617, 2, 1769474, 196609, 2, 2031618, 196609, 6, 1769475, 327681, 2, 2031619, 262145, 6, 1769476, 262145, 2, 2031620, 262145, 6, 1703941, 1966081, 2, 1769477, 327681, 2, 2031621, 327681, 6, 1769478, 262145, 2, 2031622, 327681, 6, 1769479, 327681, 2, 2031623, 196609, 6, 1769480, 196609, 2, 2031624, 196609, 6, 1769481, 327681, 2, 2031625, 262145, 6, 1769482, 196609, 2, 2031626, 327681, 6, 1703947, 1966081, 2, 1769483, 196609, 2, 2031627, 327681, 6, 1769484, 196609, 2, 2031628, 262145, 6, 1769485, 262145, 2, 2031629, 196609, 6, 1769486, 196609, 2, 2031630, 196609, 6, 1769487, 196609, 2, 2031631, 196609, 6, 1769488, 327681, 2, 2031632, 327681, 6, 1769489, 262145, 2, 2031633, 262145, 6, 1703954, 1900545, 2, 1769490, 196609, 2, 2031634, 262145, 6, 1769491, 262145, 2, 2031635, 327681, 6, 1769492, 327681, 2, 2031636, 262145, 6, 1703957, 2097153, 2, 1769493, 327681, 2, 2031637, 327681, 6, 1769494, 196609, 2, 2031638, 262145, 6, 1769495, 327681, 2, 2031639, 327681, 6, 1769496, 196609, 2, 2031640, 327681, 6, 1769497, 327681, 2, 2031641, 327681, 6, 1703962, 1966081, 2, 1769498, 327681, 2, 2031642, 196609, 6, 1769499, 262145, 2, 2031643, 327681, 6, 1769500, 196609, 2, 2031644, 262145, 6, 1769501, 327681, 2, 2031645, 196609, 6, 1769502, 196609, 2, 2031646, 196609, 6, 1769503, 262145, 2, 2031647, 196609, 6, 1769504, 196609, 2, 2031648, 327681, 6, 1703969, 2097153, 2, 1769505, 327681, 2, 2031649, 196609, 6, 1769506, 262145, 2, 2031650, 196609, 6, 1769507, 262145, 2, 2031651, 327681, 6, 1769508, 262145, 2, 2031652, 196609, 6, 1769509, 262145, 2, 2031653, 327681, 6, 1769510, 262145, 2, 2031654, 262145, 6, 1769511, 327681, 2, 2031655, 327681, 6, 1703976, 2097153, 2, 1769512, 196609, 2, 2031656, 196609, 6, 1769513, 262145, 2, 2031657, 196609, 6, 1769514, 262145, 2, 2031658, 262145, 6, 1703979, 2162689, 2, 1769515, 327681, 2, 2031659, 327681, 6, 1769516, 262145, 2, 2031660, 262145, 6, 1703981, 2097153, 2, 1769517, 196609, 2, 2031661, 196609, 6, 1769518, 262145, 2, 2031662, 327681, 6, 1769519, 262145, 2, 2031663, 196609, 6, 1703984, 1310721, 2, 1769520, 327681, 2, 2031664, 196609, 6, 1638449, 1310721, 2, 1703985, 1966081, 2, 1769521, 262145, 2, 2031665, 262145, 6, 1572914, 1310721, 2, 1769522, 196609, 2, 2031666, 327681, 6, 1507379, 1310721, 2, 1769523, 327681, 2, 2031667, 262145, 6, 1441844, 1310721, 2, 1769524, 262145, 2, 2031668, 327681, 6, 1376309, 1310721, 2, 1769525, 327681, 2, 2031669, 327681, 6, 1310774, 1310721, 2, 1703990, 1900545, 2, 1769526, 196609, 2, 2031670, 262145, 6, 1245239, 1310721, 2, 1769527, 327681, 2, 2031671, 196609, 6, 1179704, 1310721, 2, 1769528, 262145, 2, 2031672, 196609, 6, 1769529, 262145, 2, 2031673, 262145, 6, 1769530, 393217, 2, 1835066, 393217, 5, 1900602, 393217, 5, 1966138, 393217, 5, 2031674, 393217, 6)
 
-[node name="Node" type="Node" parent="."]
+[node name="GUI" parent="." instance=ExtResource("3_w0eji")]
 
-[node name="CrystalRed" parent="Node" instance=ExtResource("5_4gglr")]
+[node name="Menus" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="Menus" instance=ExtResource("4_s2q3o")]
+visible = false
+
+[node name="Crystals" type="Node" parent="."]
+
+[node name="CrystalRed" parent="Crystals" instance=ExtResource("5_4gglr")]
 position = Vector2(94, 329)
 
-[node name="CrystalGreen" parent="Node" instance=ExtResource("4_p55mr")]
+[node name="CrystalGreen" parent="Crystals" instance=ExtResource("4_p55mr")]
+position = Vector2(174, 329)
+
+[node name="CrystalBlue" parent="Crystals" instance=ExtResource("4_ea336")]
 position = Vector2(344, 329)
 
-[node name="CrystalBlue" parent="Node" instance=ExtResource("4_ea336")]
-position = Vector2(627, 337)
-
-[node name="CrystalYellow" parent="Node" instance=ExtResource("6_eqdxb")]
-position = Vector2(225, 331)
+[node name="CrystalYellow" parent="Crystals" instance=ExtResource("6_eqdxb")]
+position = Vector2(257, 329)

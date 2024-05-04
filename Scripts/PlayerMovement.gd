@@ -101,6 +101,7 @@ func _input(event):
 	if event.is_action_pressed("WASD_SECONDARY_ATTACK"):
 		if current_card != last_card_used:
 			last_card_used = current_card
+			GlobalSignals.card_used.emit(current_card)
 
 			match current_card:
 				GlobalTypes.Cards.FIRE:
@@ -124,7 +125,6 @@ func _input(event):
 					print("PM: No card selected")
 				_:
 					print("PM: Unknown card: ", current_card)
-		GlobalSignals.emit_signal("card_used", current_card)
 		current_card = GlobalTypes.Cards.NONE
 
 	# Handle jump buffer
@@ -143,10 +143,6 @@ func _input(event):
 	# DEBUG: Exit the game when ESC is pressed
 	if event.is_action_pressed("WASD_EXIT"):
 		get_tree().quit()
-
-	# DEBUG
-	if event.is_action_pressed("ui_up"):
-		print("PM: Crytal type red?: ", GlobalTypes.Crystals.FIRE)
 
 # Update the animation parameters
 func _update_animation_parameters():

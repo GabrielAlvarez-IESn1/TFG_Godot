@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="RUN_RUBY"
-run/main_scene="res://Scenes/GameScene.tscn"
+run/main_scene="res://Scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Assets/Sprites/icon.svg"
 
@@ -19,6 +19,9 @@ config/icon="res://Assets/Sprites/icon.svg"
 
 GlobalSignals="*res://Scripts/Globals/GlobalSignals.gd"
 GlobalTypes="*res://Scripts/Globals/GlobalTypes.gd"
+SceneManager="*res://Scripts/Globals/SceneManager.gd"
+GlobalMenus="*res://Scripts/Globals/GlobalMenus.gd"
+GlobalScenes="*res://Scripts/Globals/GlobalScenes.gd"
 
 [display]
 
@@ -72,12 +75,17 @@ WASD_SECONDARY_ATTACK={
 }
 WASD_EXIT={
 "deadzone": 0.5,
-"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":96,"key_label":0,"unicode":96,"echo":false,"script":null)
 ]
 }
 WASD_RESTART={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":82,"key_label":0,"unicode":114,"echo":false,"script":null)
+]
+}
+WASD_PAUSE={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194305,"key_label":0,"unicode":0,"echo":false,"script":null)
 ]
 }
 

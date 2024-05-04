@@ -1,9 +1,11 @@
-class_name GUIController
 extends CanvasLayer
 
+var timeElapsed = 0
+
 func _ready():
-	GlobalSignals.connect("crystal_taken", self.on_crystal_taken)
-	GlobalSignals.connect("card_used", self.on_card_used)
+	GlobalSignals.crystal_taken.connect(self.on_crystal_taken)
+	GlobalSignals.card_used.connect(self.on_card_used)
+	$Timer/Clock.wait_time = 1
 
 # Handle the crystal taken signal
 func on_crystal_taken(crystal_type: GlobalTypes.Crystals):
@@ -19,32 +21,38 @@ func on_card_used(card_type: GlobalTypes.Cards):
 		print("GUI: No card available")
 
 func show_card(crystal_type: GlobalTypes.Crystals):
-	$Control/PanelFire.visible = false
-	$Control/PanelLightning.visible = false
-	$Control/PanelPlant.visible = false
-	$Control/PanelWater.visible = false
+	$Panels/PanelFire.visible = false
+	$Panels/PanelLightning.visible = false
+	$Panels/PanelPlant.visible = false
+	$Panels/PanelWater.visible = false
 
 	match crystal_type:
 		GlobalTypes.Crystals.FIRE:
-			$Control/PanelFire.visible = true
+			$Panels/PanelFire.visible = true
 		GlobalTypes.Crystals.LIGHTNING:
-			$Control/PanelLightning.visible = true
+			$Panels/PanelLightning.visible = true
 		GlobalTypes.Crystals.PLANT:
-			$Control/PanelPlant.visible = true
+			$Panels/PanelPlant.visible = true
 		GlobalTypes.Crystals.WATER:
-			$Control/PanelWater.visible = true
+			$Panels/PanelWater.visible = true
 		GlobalTypes.Crystals.NONE:
 			print("GUI: No card to show")
 
 func hide_card(card_type: GlobalTypes.Cards):
 	match card_type:
 		GlobalTypes.Cards.FIRE:
-			$Control/PanelFire.visible = false
+			$Panels/PanelFire.visible = false
 		GlobalTypes.Cards.LIGHTNING:
-			$Control/PanelLightning.visible = false
+			$Panels/PanelLightning.visible = false
 		GlobalTypes.Cards.PLANT:
-			$Control/PanelPlant.visible = false
+			$Panels/PanelPlant.visible = false
 		GlobalTypes.Cards.WATER:
-			$Control/PanelWater.visible = false
+			$Panels/PanelWater.visible = false
 		GlobalTypes.Cards.NONE:
 			print("GUI: No card to hide")
+
+func _on_timer_timeout():
+	timeElapsed += 1
+	var minutes = int(timeElapsed / 60.0)
+	var seconds = timeElapsed % 60
+	$Timer/Label.text = str(minutes).pad_zeros(2) + ":" + str(seconds).pad_zeros(2)
