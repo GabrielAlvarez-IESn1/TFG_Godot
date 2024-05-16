@@ -4,6 +4,7 @@ enum GameState {
 	MAIN_MENU,
 	SCOREBOARD,
 	OPTIONS_MENU,
+	LOGIN,
 	PLAYING,
 	GAMEOVER,
 	WIN,
@@ -28,6 +29,8 @@ func _on_game_state_changed(state):
 			get_tree().change_scene_to_file(GlobalScenes.scenes["options"])
 		GameState.PLAYING:
 			get_tree().change_scene_to_file(GlobalScenes.scenes["game"])
+		GameState.LOGIN:
+			get_tree().change_scene_to_file(GlobalScenes.scenes["login"])
 		GameState.GAMEOVER:
 			print("Gameover")
 		GameState.WIN:

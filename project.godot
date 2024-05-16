@@ -22,6 +22,8 @@ GlobalTypes="*res://Scripts/Globals/GlobalTypes.gd"
 SceneManager="*res://Scripts/Globals/SceneManager.gd"
 GlobalMenus="*res://Scripts/Globals/GlobalMenus.gd"
 GlobalScenes="*res://Scripts/Globals/GlobalScenes.gd"
+SilentWolf="*res://Addons/silent_wolf/SilentWolf.gd"
+GlobalSw="*res://Scripts/Globals/GlobalSW.gd"
 
 [display]
 

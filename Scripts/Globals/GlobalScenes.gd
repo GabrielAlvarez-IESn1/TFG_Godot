@@ -5,4 +5,5 @@ var scenes = {
     "scoreboard": "res://Scenes/Scoreboard.tscn",
     "options": "res://Scenes/OptionsMenu.tscn",
     "game": "res://Scenes/GameScene.tscn",
+    "login": "res://Scenes/Login.tscn",
 }
