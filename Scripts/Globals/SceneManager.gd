@@ -13,11 +13,11 @@ enum GameState {
 var game_state = GameState.MAIN_MENU
 
 func _ready():
-	GlobalSignals.connect("game_state_changed", self._on_game_state_changed)
+	GlobalSignals.game_state_changed.connect(self._on_game_state_changed)
 
 func change_game_state(state):
 	game_state = state
-	GlobalSignals.emit_signal("game_state_changed", game_state)
+	GlobalSignals.game_state_changed.emit(game_state)
 
 func _on_game_state_changed(state):
 	match state:

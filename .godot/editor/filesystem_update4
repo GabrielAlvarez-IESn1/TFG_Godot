@@ -9,3 +9,17 @@ res://Menus/PauseMenu.tscn
 res://Scenes/OptionsMenu.tscn
 res://Scenes/Login.tscn
 res://Scripts/LoginController.gd
+res://Scripts/PauseMenu.gd
+res://Scripts/EndZoneController.gd
+res://Scripts/CrystalController.gd
+res://Scripts/Globals/SceneManager.gd
+res://Scripts/Globals/GlobalSignals.gd
+res://Scripts/Globals/GlobalScenes.gd
+res://Scripts/WinMenu.gd
+res://Menus/WinMenu.tscn
+res://Scripts/GUIController.gd
+res://Prefabs/Crystals/CrystalRed.tscn
+res://Scripts/OptionsMenu.gd
+res://Scripts/Globals/GlobalSW.gd
+res://Scripts/Globals/GlobalTypes.gd
+res://Scripts/Globals/GlobalMenus.gd

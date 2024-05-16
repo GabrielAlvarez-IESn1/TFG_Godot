@@ -1,3 +1,8 @@
+CollisionPolygon2D
+CollisionShape2D
+Sprite2D
+StaticBody2D
+Area2D
 Button
 LineEdit
 Label
@@ -8,7 +13,3 @@ PanelContainer
 CanvasLayer
 VBoxContainer
 TextureRect
-Camera2D
-Panel
-Container
-Sprite2D

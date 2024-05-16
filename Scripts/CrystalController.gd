@@ -3,7 +3,7 @@ extends Area2D
 
 func _on_area_entered(area):
 	if area.is_in_group("Player"):
-		GlobalSignals.emit_signal("crystal_taken", get_crystal_type())
+		GlobalSignals.crystal_taken.emit(self.get_crystal_type())
 		queue_free()
 
 func get_crystal_type() -> GlobalTypes.Crystals:

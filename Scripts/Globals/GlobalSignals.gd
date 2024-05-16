@@ -7,3 +7,5 @@ signal game_state_changed(game_state)
 
 signal game_paused()
 signal game_unpaused()
+
+signal end_zone_reached()
