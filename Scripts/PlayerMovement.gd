@@ -16,6 +16,7 @@ var movement_speed = 300.0
 var jump_buffer_timer = 0.0
 var direction = Vector2()
 var is_dashing = false
+var is_gliding = false
 
 var last_card_used = GlobalTypes.Cards.NONE
 var current_card = GlobalTypes.Cards.NONE
@@ -48,7 +49,7 @@ func _physics_process(delta):
 		coyote_timer -= delta
 
 	# Add the gravity
-	if not is_on_floor():
+	if not is_on_floor() and not is_gliding:
 		velocity.y += gravity * delta
 
 	# Reset the coyote timer when on floor
@@ -118,9 +119,11 @@ func _input(event):
 					movement_speed += 300
 					is_dashing = false
 				GlobalTypes.Cards.WATER:
-					gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-					await (get_tree().create_timer(3.0).timeout)
+					is_gliding = true
+					gravity = 0
+					await (get_tree().create_timer(0.5).timeout)
 					gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 1.5
+					is_gliding = false
 				GlobalTypes.Cards.NONE:
 					print("PM: No card selected")
 				_:
