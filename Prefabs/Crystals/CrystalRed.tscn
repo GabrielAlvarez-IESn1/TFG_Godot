@@ -36,7 +36,7 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dhwfq"]
 
-[node name="CrystalRed" type="Area2D" groups=["Pickup"]]
+[node name="CrystalRed" type="Area2D" groups=["Crystal"]]
 script = ExtResource("1_hlu2w")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -52,5 +52,3 @@ speed_scale = 0.5
 visible = false
 scale = Vector2(0.8, 1.454)
 shape = SubResource("CircleShape2D_dhwfq")
-
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]

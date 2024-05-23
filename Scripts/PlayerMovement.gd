@@ -8,6 +8,7 @@ const JUMP_BUFFER_TIME = 0.1
 
 var animation_tree: AnimationTree
 var state_machine: AnimationNodeStateMachinePlayback
+var hitbox_area: Area2D
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 1.5
 var coyote_timer = 0.0
@@ -23,7 +24,10 @@ var current_card = GlobalTypes.Cards.NONE
 
 func _ready():
 	# Default properties
-	slide_on_ceiling = true
+	self.slide_on_ceiling = true
+
+	# Hitbox
+	hitbox_area = $HitboxArea
 
 	# Animations
 	animation_tree = $AnimationTree
@@ -95,6 +99,8 @@ func _input(event):
 		if not is_attacking:
 			is_attacking = true
 			state_machine.travel("Attack1")
+			print("PM: hitbox_area.activate_hitbox()")
+			hitbox_area.activate_hitbox()
 		else:
 			state_machine.travel("Attack2")
 
@@ -106,11 +112,11 @@ func _input(event):
 
 			match current_card:
 				GlobalTypes.Cards.FIRE:
-					movement_speed += 100
+					movement_speed += 150
 					await (get_tree().create_timer(3.0).timeout)
-					movement_speed -= 100
+					movement_speed -= 150
 				GlobalTypes.Cards.LIGHTNING:
-					velocity.y = JUMP_VELOCITY
+					velocity.y = JUMP_VELOCITY * 1.25
 				GlobalTypes.Cards.PLANT:
 					is_dashing = true
 					movement_speed -= 300
@@ -158,8 +164,10 @@ func _update_animation_parameters():
 func _on_animation_finished(anim_name):
 	if anim_name == "Attack1" and not state_machine.get_current_node() == "Attack2":
 		is_attacking = false
+		hitbox_area.deactivate_hitbox()
 	elif anim_name == "Attack2":
 		is_attacking = false
+		hitbox_area.deactivate_hitbox()
 
 # Handle the crystal taken signal
 func on_crystal_taken(crystal_type: GlobalTypes.Crystals):

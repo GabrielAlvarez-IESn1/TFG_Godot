@@ -1,10 +1,9 @@
 class_name CrystalController
 extends Area2D
 
-func _on_area_entered(area):
-	if area.is_in_group("Player"):
-		GlobalSignals.crystal_taken.emit(self.get_crystal_type())
-		queue_free()
+func take_crystal():
+	GlobalSignals.crystal_taken.emit(self.get_crystal_type())
+	queue_free()
 
 func get_crystal_type() -> GlobalTypes.Crystals:
 	var crystal_type = GlobalTypes.Crystals.NONE
