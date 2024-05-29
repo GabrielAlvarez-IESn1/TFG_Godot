@@ -29,10 +29,10 @@ size_flags_horizontal = 4
 size_flags_vertical = 0
 text = "WIN!"
 
-[node name="NextButton" type="Button" parent="VBoxContainer"]
+[node name="ScoreboardButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 4
-text = "NEXT"
+text = "SCOREBOARD"
 
 [node name="RestartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -44,6 +44,6 @@ layout_mode = 2
 size_flags_vertical = 4
 text = "MAIN MENU"
 
-[connection signal="pressed" from="VBoxContainer/NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ScoreboardButton" to="." method="_on_scoreboard_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/MainmenuButton" to="." method="_on_mainmenu_button_pressed"]

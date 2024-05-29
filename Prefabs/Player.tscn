@@ -519,9 +519,9 @@ script = ExtResource("1_copeq")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["Player"]]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0y456")
-animation = &"Attack1"
+animation = &"Spawn"
 autoplay = "Idle"
-frame = 3
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
 visible = false
@@ -540,6 +540,7 @@ scale = Vector2(1, 4.09375)
 polygon = PackedVector2Array(-5, 1.78015, -4, -0.174046, -1, -0.90687, -1, -1.63969, 5, -1.63969, 5, -0.662596, 7, 2.02443, 7, 3.97863, -5, 3.97863)
 
 [node name="HitboxArea" type="Area2D" parent="." groups=["Player"]]
+visible = false
 input_pickable = false
 script = ExtResource("47_dr48a")
 

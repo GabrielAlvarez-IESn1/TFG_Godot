@@ -1,7 +1,7 @@
 extends Control
 
 func _process(_delta):
-	if Input.is_action_just_pressed("WASD_PAUSE"):
+	if Input.is_action_just_pressed("WASD_PAUSE") and SceneManager.game_state != SceneManager.GameState.WIN:
 		if get_tree().paused:
 			GlobalSignals.game_unpaused.emit()
 		else:

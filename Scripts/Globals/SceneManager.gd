@@ -6,7 +6,6 @@ enum GameState {
 	OPTIONS_MENU,
 	LOGIN,
 	PLAYING,
-	GAMEOVER,
 	WIN,
 }
 
@@ -16,8 +15,7 @@ func _ready():
 	GlobalSignals.game_state_changed.connect(self._on_game_state_changed)
 
 func change_game_state(state):
-	game_state = state
-	GlobalSignals.game_state_changed.emit(game_state)
+	GlobalSignals.game_state_changed.emit(state)
 
 func _on_game_state_changed(state):
 	match state:
@@ -31,7 +29,5 @@ func _on_game_state_changed(state):
 			get_tree().change_scene_to_file(GlobalScenes.scenes["game"])
 		GameState.LOGIN:
 			get_tree().change_scene_to_file(GlobalScenes.scenes["login"])
-		GameState.GAMEOVER:
-			print("Gameover")
 		GameState.WIN:
-			print("Win")
+			pass # Nothing to do here

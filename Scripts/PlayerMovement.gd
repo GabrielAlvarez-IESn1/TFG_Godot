@@ -18,6 +18,7 @@ var jump_buffer_timer = 0.0
 var direction = Vector2()
 var is_dashing = false
 var is_gliding = false
+var is_stomping = false
 
 var last_card_used = GlobalTypes.Cards.NONE
 var current_card = GlobalTypes.Cards.NONE
@@ -64,7 +65,7 @@ func _physics_process(delta):
 	if jump_buffer_timer > 0:
 		jump_buffer_timer -= delta
 
-	if (Input.is_action_just_pressed("WASD_SPACEBAR") and coyote_timer > 0) or (is_on_floor() and jump_buffer_timer > 0):
+	if ((Input.is_action_just_pressed("WASD_SPACEBAR") and coyote_timer > 0) or (is_on_floor() and jump_buffer_timer > 0)) and not is_gliding:
 		velocity.y = JUMP_VELOCITY
 		coyote_timer = 0
 		jump_buffer_timer = 0
@@ -73,7 +74,7 @@ func _physics_process(delta):
 	direction = Input.get_axis("WASD_A", "WASD_D")
 
 	# Move the player
-	if not is_dashing:
+	if not is_dashing and not is_stomping:
 		if is_attacking:
 			if is_on_floor():
 				velocity.x = lerp(velocity.x, velocity.x * 0.5, 0.1)
@@ -85,8 +86,10 @@ func _physics_process(delta):
 
 				if direction < 0:
 					$AnimatedSprite2D.flip_h = true
+					hitbox_area.get_child(0).position.x = -hitbox_area.get_child(0).position.x
 				else:
 					$AnimatedSprite2D.flip_h = false
+					hitbox_area.get_child(0).position.x = abs(hitbox_area.get_child(0).position.x)
 			else:
 				velocity.x = move_toward(velocity.x, 0, movement_speed)
 
@@ -99,7 +102,6 @@ func _input(event):
 		if not is_attacking:
 			is_attacking = true
 			state_machine.travel("Attack1")
-			print("PM: hitbox_area.activate_hitbox()")
 			hitbox_area.activate_hitbox()
 		else:
 			state_machine.travel("Attack2")
@@ -112,24 +114,27 @@ func _input(event):
 
 			match current_card:
 				GlobalTypes.Cards.FIRE:
-					movement_speed += 150
-					await (get_tree().create_timer(3.0).timeout)
-					movement_speed -= 150
-				GlobalTypes.Cards.LIGHTNING:
 					velocity.y = JUMP_VELOCITY * 1.25
-				GlobalTypes.Cards.PLANT:
+				GlobalTypes.Cards.LIGHTNING:
 					is_dashing = true
 					movement_speed -= 300
 					velocity.x = lerp(velocity.x, velocity.x * 100, 0.1)
 					await (get_tree().create_timer(0.1).timeout)
 					movement_speed += 300
 					is_dashing = false
-				GlobalTypes.Cards.WATER:
+				GlobalTypes.Cards.PLANT:
 					is_gliding = true
-					gravity = 0
-					await (get_tree().create_timer(0.5).timeout)
-					gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * 1.5
+					velocity.y = 0
+					await (get_tree().create_timer(1).timeout)
 					is_gliding = false
+				GlobalTypes.Cards.WATER:
+					is_stomping = true
+					velocity.x = 0
+					velocity.y = 0
+					await (get_tree().create_timer(0.3).timeout)
+					velocity.y = lerp(0, 10000, 0.3)
+					await (get_tree().create_timer(0.3).timeout)
+					is_stomping = false
 				GlobalTypes.Cards.NONE:
 					print("PM: No card selected")
 				_:
@@ -171,6 +176,7 @@ func _on_animation_finished(anim_name):
 
 # Handle the crystal taken signal
 func on_crystal_taken(crystal_type: GlobalTypes.Crystals):
+	last_card_used = GlobalTypes.Cards.NONE
 	match crystal_type:
 		GlobalTypes.Crystals.FIRE:
 			current_card = GlobalTypes.Cards.FIRE

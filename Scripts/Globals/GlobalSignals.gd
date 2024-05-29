@@ -1,5 +1,7 @@
 extends Node
 
+signal player_logged_in()
+
 signal crystal_taken(crystal_type)
 signal card_used(card_type)
 

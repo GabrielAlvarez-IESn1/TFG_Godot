@@ -1,3 +1,6 @@
+Label
+PanelContainer
+Panel
 CollisionShape2D
 Area2D
 CollisionPolygon2D
@@ -5,10 +8,7 @@ Sprite2D
 StaticBody2D
 Button
 LineEdit
-Label
 Timer
 RichTextLabel
 Control
-PanelContainer
 CanvasLayer
-VBoxContainer
