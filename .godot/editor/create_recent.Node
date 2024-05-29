@@ -1,6 +1,7 @@
-Label
-PanelContainer
 Panel
+PanelContainer
+Control
+Label
 CollisionShape2D
 Area2D
 CollisionPolygon2D
@@ -10,5 +11,4 @@ Button
 LineEdit
 Timer
 RichTextLabel
-Control
 CanvasLayer

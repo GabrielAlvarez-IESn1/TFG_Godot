@@ -139,4 +139,40 @@ text = "00:00
 [node name="Clock" type="Timer" parent="Timer"]
 autostart = true
 
+[node name="Score" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ScoreLabel" type="Label" parent="Score"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 403.0
+offset_top = 60.0
+offset_right = 518.0
+offset_bottom = 102.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 30
+text = "SCORE"
+horizontal_alignment = 1
+
+[node name="ScoreNumber" type="Label" parent="Score"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 403.0
+offset_top = 102.0
+offset_right = 518.0
+offset_bottom = 144.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.879556, 0.501791, 0.886663, 1)
+theme_override_font_sizes/font_size = 30
+text = "000"
+horizontal_alignment = 1
+
 [connection signal="timeout" from="Timer/Clock" to="." method="_on_timer_timeout"]

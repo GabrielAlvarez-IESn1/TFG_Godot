@@ -5,10 +5,10 @@ extends Control
 func _ready():
 	if GlobalData.player_logged_in:
 		$LoginBlocker.hide()
-		$LoggedAs.text = GlobalData.player_data.name
+		$Login/LoggedAs.text = GlobalData.player_data.name
 	else:
 		$LoginBlocker.show()
-		$LoggedAs.text = "Not logged yet"
+		$Login/LoggedAs.text = "Not logged yet"
 
 func _on_start_button_pressed():
 	SceneManager.change_game_state(SceneManager.GameState.PLAYING)

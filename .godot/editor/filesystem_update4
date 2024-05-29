@@ -1,9 +1,14 @@
-res://Scenes/GameScene.tscn
+res://Scenes/MainMenu.tscn
 res://Addons/silent_wolf/assets/themes/sw_theme.tres
 res://Scripts/PlayerMovement.gd
 res://Animators/PlayerStateAnimator.tres
+res://Scenes/GameScene.tscn
 res://Prefabs/Player.tscn
 res://Prefabs/EndZone.tscn
 res://Menus/WinMenu.tscn
-res://Scenes/MainMenu.tscn
+res://Prefabs/GUI.tscn
 res://Scripts/MainMenu.gd
+res://Scripts/EndZoneController.gd
+res://Scripts/GUIController.gd
+res://Addons/silent_wolf/SilentWolf.gd
+res://Scripts/LoginController.gd

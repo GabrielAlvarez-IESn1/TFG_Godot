@@ -7,6 +7,7 @@ func _ready():
 	GlobalSignals.card_used.connect(self.on_card_used)
 	GlobalSignals.end_zone_reached.connect(self.on_end_zone_reached)
 	$Timer/Clock.wait_time = 1
+	$Score.visible = false
 
 # Handle the crystal taken signal
 func on_crystal_taken(crystal_type: GlobalTypes.Crystals):
@@ -51,10 +52,9 @@ func _on_timer_timeout():
 	$Timer/Label.text = str(minutes).pad_zeros(2) + ":" + str(seconds).pad_zeros(2)
 
 func on_end_zone_reached():
-	SilentWolf.Scores.save_score(GlobalData.player_data.name, 75)
+	$Score.visible = true
+	$Score/ScoreNumber.text = str(abs(1000 - timeElapsed))
 	GlobalData.player_data.score = abs(1000 - timeElapsed)
-	var top_score = await SilentWolf.Scores.get_top_score_by_player(GlobalData.player_data.name).sw_top_player_score_complete
-
-	print("########## Top score: ", top_score)
+	# var top_score = await SilentWolf.Scores.get_top_score_by_player(GlobalData.player_data.name).sw_top_player_score_complete
 
 	await SilentWolf.Scores.save_score(GlobalData.player_data.name, GlobalData.player_data.score).sw_save_score_complete
