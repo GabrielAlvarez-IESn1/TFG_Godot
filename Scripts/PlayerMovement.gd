@@ -140,7 +140,7 @@ func _input(event):
 					is_stomping = true
 					velocity.x = 0
 					velocity.y = 0
-					await (get_tree().create_timer(0.3).timeout)
+					await (get_tree().create_timer(0.1).timeout)
 					velocity.y = lerp(0, 10000, 0.3)
 					await (get_tree().create_timer(0.3).timeout)
 					is_stomping = false
@@ -159,13 +159,9 @@ func _input(event):
 		var mouse_position = get_global_mouse_position()
 		global_position = mouse_position
 
-	# DEBUG: Restart the scene when R is pressed
+	# Restart the scene when R is pressed
 	if event.is_action_pressed("WASD_RESTART"):
 		get_tree().reload_current_scene()
-
-	# DEBUG: Exit the game when ESC is pressed
-	if event.is_action_pressed("WASD_EXIT"):
-		get_tree().quit()
 
 # Update the animation parameters
 func _update_animation_parameters():

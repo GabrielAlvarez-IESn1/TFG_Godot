@@ -19,13 +19,13 @@ res://prefabs/Crystals/CrystalBlue.tscn::9c3c33e3a5793e81021b5c8f0869a3ab::17171
 res://prefabs/Crystals/CrystalGreen.tscn::790ffdd6ab8df8e0897be15d6467dbe9::1717100722::res://.godot/exported/133200997/export-ba099d291117f8e91d43b7f89b8ffc09-CrystalGreen.scn
 res://prefabs/Crystals/CrystalRed.tscn::1c1927c547f62535705245f916a1cb4e::1717100727::res://.godot/exported/133200997/export-a29bcead2fc779a44d619a02af9763f8-CrystalRed.scn
 res://prefabs/Crystals/CrystalYellow.tscn::f63d7d9b85c087660e6e9f77844f3b82::1717100722::res://.godot/exported/133200997/export-20eae2e4a6100a00e34577478fdddb79-CrystalYellow.scn
-res://prefabs/audio_player.tscn::ade2c47216f836dea4786ce32f51a076::1717100722::res://.godot/exported/133200997/export-4a382f4fe35293ab4021e61021a8ec29-audio_player.scn
+res://prefabs/audio_player.tscn::ade2c47216f836dea4786ce32f51a076::1717101004::res://.godot/exported/133200997/export-4a382f4fe35293ab4021e61021a8ec29-audio_player.scn
 res://prefabs/EndZone.tscn::3cf89df537a37f6a0d5557fa00afaa44::1717100727::res://.godot/exported/133200997/export-461d857f29276dc8b3e73fd124211e07-EndZone.scn
 res://prefabs/GUI.tscn::ba2a34359a58e93ba2bf17050c26660c::1717100722::res://.godot/exported/133200997/export-20d274d3f67c70f2cc008fd1809a524f-GUI.scn
 res://prefabs/parallax_background.tscn::ead86070b87e217ff1f3feaee9d70b1d::1717100697::res://.godot/exported/133200997/export-cc230ac5a567bf6f27c18a67d6feff45-parallax_background.scn
 res://prefabs/Player.tscn::9b626c58581e0bf6cfff1d576e5bc560::1717100722::res://.godot/exported/133200997/export-48f5d981daf771aa484bbba9dfc3c30a-Player.scn
 res://scenes/Levels/Level0.tscn::b7426e77d4f56e97a28fb511c4ba3291::1717100714::res://.godot/exported/133200997/export-f464c8a4a3a960e7b7e5c86a8a92be73-Level0.scn
-res://scenes/GameScene.tscn::03935ff7527dcfe5c944c206a976a616::1717100768::res://.godot/exported/133200997/export-15024b5764635ac5d5eac182fd173676-GameScene.scn
+res://scenes/GameScene.tscn::03935ff7527dcfe5c944c206a976a616::1717100983::res://.godot/exported/133200997/export-15024b5764635ac5d5eac182fd173676-GameScene.scn
 res://scenes/Login.tscn::8546d388def9e62b8c75bebb20a65c17::1717100722::res://.godot/exported/133200997/export-742156800d8cc4d9995ea5ff4351d464-Login.scn
-res://scenes/MainMenu.tscn::947c1f722384db96098a68d597568a79::1717100868::res://.godot/exported/133200997/export-23c8b2a48d59a0cd018bd8ad5ce7794c-MainMenu.scn
+res://scenes/MainMenu.tscn::947c1f722384db96098a68d597568a79::1717100983::res://.godot/exported/133200997/export-23c8b2a48d59a0cd018bd8ad5ce7794c-MainMenu.scn
 res://scenes/OptionsMenu.tscn::c7ec911636b301ba5c70c553b0ffee60::1717100758::res://.godot/exported/133200997/export-f274810c5d37629ca4490a04dacee34a-OptionsMenu.scn
