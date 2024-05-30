@@ -1,8 +1,8 @@
 class_name CrystalController
 extends Area2D
 
-@onready var impact_hit_fx = preload("res://Audio/impact_hit.mp3")
-@onready var crystal_pickup_fx = preload("res://Audio/crystal_brake.mp3")
+@onready var impact_hit_fx = preload("res://audio/impact_hit.mp3")
+@onready var crystal_pickup_fx = preload("res://audio/crystal_brake.mp3")
 
 func take_crystal():
 	GlobalSignals.crystal_taken.emit(self.get_crystal_type())

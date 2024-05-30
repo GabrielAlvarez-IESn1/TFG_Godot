@@ -23,10 +23,10 @@ var is_stomping = false
 var last_card_used = GlobalTypes.Cards.NONE
 var current_card = GlobalTypes.Cards.NONE
 
-@onready var fire_fx = preload("res://Audio/fire_ability.mp3")
-@onready var lightning_fx = preload("res://Audio/lightning_ability.mp3")
-@onready var plant_fx = preload("res://Audio/plant_ability.mp3")
-@onready var water_fx = preload("res://Audio/water_ability.mp3")
+@onready var fire_fx = preload("res://audio/fire_ability.mp3")
+@onready var lightning_fx = preload("res://audio/lightning_ability.mp3")
+@onready var plant_fx = preload("res://audio/plant_ability.mp3")
+@onready var water_fx = preload("res://audio/water_ability.mp3")
 
 func _ready():
 	# Default properties
@@ -144,10 +144,6 @@ func _input(event):
 					velocity.y = lerp(0, 10000, 0.3)
 					await (get_tree().create_timer(0.3).timeout)
 					is_stomping = false
-				GlobalTypes.Cards.NONE:
-					print("PM: No card selected")
-				_:
-					print("PM: Unknown card: ", current_card)
 		current_card = GlobalTypes.Cards.NONE
 
 	# Handle jump buffer

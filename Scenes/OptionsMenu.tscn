@@ -128,6 +128,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 15
 text = "A & D > Move"
 
+[node name="Label1" type="Label" parent="Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "Space > Jump"
+
 [node name="Label2" type="Label" parent="Controls/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 15
