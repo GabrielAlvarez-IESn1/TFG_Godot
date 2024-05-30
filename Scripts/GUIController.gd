@@ -3,6 +3,7 @@ extends CanvasLayer
 var timeElapsed = 0
 
 func _ready():
+	AudioPlayer.play_music_level()
 	GlobalSignals.crystal_taken.connect(self.on_crystal_taken)
 	GlobalSignals.card_used.connect(self.on_card_used)
 	GlobalSignals.end_zone_reached.connect(self.on_end_zone_reached)
