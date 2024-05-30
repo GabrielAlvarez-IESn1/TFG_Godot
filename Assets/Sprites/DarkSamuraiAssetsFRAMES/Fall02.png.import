@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dxdim0u8eskcy"
-path="res://.godot/imported/Fall02.png-d2fcd2e79706e6006b6b56f13c89f8dc.ctex"
+path="res://.godot/imported/Fall02.png-41bcb444be972acfa9bb14d5cb9a8575.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/Fall02.png"
-dest_files=["res://.godot/imported/Fall02.png-d2fcd2e79706e6006b6b56f13c89f8dc.ctex"]
+source_file="res://assets/Sprites/DarkSamuraiAssetsFRAMES/Fall02.png"
+dest_files=["res://.godot/imported/Fall02.png-41bcb444be972acfa9bb14d5cb9a8575.ctex"]
 
 [params]
 

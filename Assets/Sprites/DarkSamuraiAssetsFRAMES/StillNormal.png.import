@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2ei82d3we4pq"
-path="res://.godot/imported/StillNormal.png-c296f4292df183c85eaf1d8e4742ad33.ctex"
+path="res://.godot/imported/StillNormal.png-08fcb2b71eddff62c23e523b2c4aa05b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/StillNormal.png"
-dest_files=["res://.godot/imported/StillNormal.png-c296f4292df183c85eaf1d8e4742ad33.ctex"]
+source_file="res://assets/Sprites/DarkSamuraiAssetsFRAMES/StillNormal.png"
+dest_files=["res://.godot/imported/StillNormal.png-08fcb2b71eddff62c23e523b2c4aa05b.ctex"]
 
 [params]
 

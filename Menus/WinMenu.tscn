@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c1ghd77op7yxq"]
 
-[ext_resource type="Script" path="res://Scripts/WinMenu.gd" id="1_eu13t"]
+[ext_resource type="Script" path="res://scripts/WinMenu.gd" id="1_eu13t"]
 
 [node name="WinMenu" type="Control"]
 process_mode = 3
@@ -35,13 +35,15 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 50
-text = "WIN!"
+theme_override_colors/font_color = Color(0.0752628, 0.777095, 7.70092e-07, 1)
+theme_override_font_sizes/font_size = 30
+text = "WINNER!"
 
 [node name="ScoreboardButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2

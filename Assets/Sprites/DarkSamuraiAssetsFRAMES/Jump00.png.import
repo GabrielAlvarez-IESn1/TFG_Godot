@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://jalmbfhynbhn"
-path="res://.godot/imported/Jump00.png-798e4b756a21f8e08c69672654d5be41.ctex"
+path="res://.godot/imported/Jump00.png-03cda2d510de39c1114c6ed24e335ddf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/Jump00.png"
-dest_files=["res://.godot/imported/Jump00.png-798e4b756a21f8e08c69672654d5be41.ctex"]
+source_file="res://assets/Sprites/DarkSamuraiAssetsFRAMES/Jump00.png"
+dest_files=["res://.godot/imported/Jump00.png-03cda2d510de39c1114c6ed24e335ddf.ctex"]
 
 [params]
 

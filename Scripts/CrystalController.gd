@@ -6,8 +6,8 @@ extends Area2D
 
 func take_crystal():
 	GlobalSignals.crystal_taken.emit(self.get_crystal_type())
-	AudioPlayer.play_FX(impact_hit_fx)
-	AudioPlayer.play_FX(crystal_pickup_fx)
+	GlobalAudioPlayer.play_FX(impact_hit_fx)
+	GlobalAudioPlayer.play_FX(crystal_pickup_fx)
 	queue_free()
 
 func get_crystal_type() -> GlobalTypes.Crystals:

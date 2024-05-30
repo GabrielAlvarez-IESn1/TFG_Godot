@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d0vfqjcnpggl1"
-path="res://.godot/imported/border_half_triangle.png-fa711a358b34a7f8621f611b5955e241.ctex"
+path="res://.godot/imported/border_half_triangle.png-71aa97c8f19f66efee1644f0721141b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BasicShapes/border_half_triangle.png"
-dest_files=["res://.godot/imported/border_half_triangle.png-fa711a358b34a7f8621f611b5955e241.ctex"]
+source_file="res://assets/Sprites/BasicShapes/border_half_triangle.png"
+dest_files=["res://.godot/imported/border_half_triangle.png-71aa97c8f19f66efee1644f0721141b8.ctex"]
 
 [params]
 

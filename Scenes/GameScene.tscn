@@ -1,18 +1,18 @@
 [gd_scene load_steps=12 format=3 uid="uid://rbfkhmeoq52e"]
 
-[ext_resource type="PackedScene" uid="uid://wxcxdp2wcoca" path="res://Prefabs/EndZone.tscn" id="1_egfgo"]
-[ext_resource type="Texture2D" uid="uid://d01x8epp0uqd5" path="res://Assets/TileMaps/TranquilTunnels.png" id="2_6gjdq"]
-[ext_resource type="PackedScene" uid="uid://cs705xb2e2wpu" path="res://Prefabs/Player.tscn" id="2_8388w"]
-[ext_resource type="PackedScene" uid="uid://dy52hmex8kf8c" path="res://Prefabs/Crystals/CrystalBlue.tscn" id="4_ea336"]
-[ext_resource type="PackedScene" uid="uid://boeosgbw6uc7m" path="res://Prefabs/Crystals/CrystalGreen.tscn" id="4_p55mr"]
-[ext_resource type="PackedScene" uid="uid://dhu6072o33ipu" path="res://Menus/PauseMenu.tscn" id="4_s2q3o"]
-[ext_resource type="PackedScene" uid="uid://5h8hbsy6awm5" path="res://Prefabs/Crystals/CrystalRed.tscn" id="5_4gglr"]
-[ext_resource type="PackedScene" uid="uid://djxdkapifttiq" path="res://Prefabs/Crystals/CrystalYellow.tscn" id="6_eqdxb"]
-[ext_resource type="PackedScene" uid="uid://c1ghd77op7yxq" path="res://Menus/WinMenu.tscn" id="7_rvhhq"]
+[ext_resource type="PackedScene" uid="uid://cs705xb2e2wpu" path="res://prefabs/Player.tscn" id="1_nxnf7"]
+[ext_resource type="Texture2D" uid="uid://d01x8epp0uqd5" path="res://assets/TileMaps/TranquilTunnels.png" id="2_j57du"]
+[ext_resource type="PackedScene" uid="uid://5h8hbsy6awm5" path="res://prefabs/Crystals/CrystalRed.tscn" id="3_7ffks"]
+[ext_resource type="PackedScene" uid="uid://boeosgbw6uc7m" path="res://prefabs/Crystals/CrystalGreen.tscn" id="4_1ecwn"]
+[ext_resource type="PackedScene" uid="uid://dy52hmex8kf8c" path="res://prefabs/Crystals/CrystalBlue.tscn" id="5_rw747"]
+[ext_resource type="PackedScene" uid="uid://djxdkapifttiq" path="res://prefabs/Crystals/CrystalYellow.tscn" id="6_fcibh"]
+[ext_resource type="PackedScene" uid="uid://wxcxdp2wcoca" path="res://prefabs/EndZone.tscn" id="7_4wjmj"]
+[ext_resource type="PackedScene" uid="uid://dhu6072o33ipu" path="res://menus/PauseMenu.tscn" id="8_7ulxh"]
+[ext_resource type="PackedScene" uid="uid://c1ghd77op7yxq" path="res://menus/WinMenu.tscn" id="9_5xhd2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_im1jq"]
 resource_name = "TranquilTunnels"
-texture = ExtResource("2_6gjdq")
+texture = ExtResource("2_j57du")
 texture_region_size = Vector2i(8, 8)
 2:2/0 = 0
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -12203,7 +12203,7 @@ sources/1 = SubResource("TileSetAtlasSource_im1jq")
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("2_8388w")]
+[node name="Player" parent="." instance=ExtResource("1_nxnf7")]
 position = Vector2(136, 572)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -12214,27 +12214,27 @@ layer_0/tile_data = PackedInt32Array(2490370, 196609, 2, 2555906, 720897, 2, 249
 
 [node name="Crystals" type="Node" parent="."]
 
-[node name="CrystalRed_1" parent="Crystals" instance=ExtResource("5_4gglr")]
+[node name="CrystalRed_1" parent="Crystals" instance=ExtResource("3_7ffks")]
 position = Vector2(504, 572)
 
-[node name="CrystalGreen_1" parent="Crystals" instance=ExtResource("4_p55mr")]
+[node name="CrystalGreen_1" parent="Crystals" instance=ExtResource("4_1ecwn")]
 position = Vector2(2798, 1379)
 
-[node name="CrystalBlue_1" parent="Crystals" instance=ExtResource("4_ea336")]
+[node name="CrystalBlue_1" parent="Crystals" instance=ExtResource("5_rw747")]
 position = Vector2(2271, 355)
 
-[node name="CrystalYellow_1" parent="Crystals" instance=ExtResource("6_eqdxb")]
+[node name="CrystalYellow_1" parent="Crystals" instance=ExtResource("6_fcibh")]
 position = Vector2(992, 355)
 
-[node name="EndZone" parent="." instance=ExtResource("1_egfgo")]
-position = Vector2(35, 572)
+[node name="EndZone" parent="." instance=ExtResource("7_4wjmj")]
+position = Vector2(3475, 2135)
 
 [node name="Menus" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="Menus" instance=ExtResource("4_s2q3o")]
+[node name="PauseMenu" parent="Menus" instance=ExtResource("8_7ulxh")]
 visible = false
 
-[node name="WinMenu" parent="Menus" instance=ExtResource("7_rvhhq")]
+[node name="WinMenu" parent="Menus" instance=ExtResource("9_5xhd2")]
 visible = false
 anchors_preset = 8
 anchor_left = 0.5

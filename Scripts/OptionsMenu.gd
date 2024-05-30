@@ -6,12 +6,11 @@ func _on_back_button_pressed():
 func _on_quit_button_pressed():
 	get_tree().quit()
 
-
 func _on_master_volume_slider_value_changed(value:float):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), linear_to_db(value))
 
 func _on_music_volume_slider_value_changed(value:float):
-	AudioPlayer.music_volume = linear_to_db(value)
+	GlobalAudioPlayer.music_volume = linear_to_db(value)
 
 func _on_fx_volume_slider_value_changed(value:float):
-	AudioPlayer.fx_volume = linear_to_db(value)
+	GlobalAudioPlayer.fx_volume = linear_to_db(value)

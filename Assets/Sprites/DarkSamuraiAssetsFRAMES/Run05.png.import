@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmhmxlxtuod2e"
-path="res://.godot/imported/Run05.png-f5731210464cefec544fad218b30981a.ctex"
+path="res://.godot/imported/Run05.png-d173cc27d159abed19097b86bc9ac5ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/Run05.png"
-dest_files=["res://.godot/imported/Run05.png-f5731210464cefec544fad218b30981a.ctex"]
+source_file="res://assets/Sprites/DarkSamuraiAssetsFRAMES/Run05.png"
+dest_files=["res://.godot/imported/Run05.png-d173cc27d159abed19097b86bc9ac5ba.ctex"]
 
 [params]
 

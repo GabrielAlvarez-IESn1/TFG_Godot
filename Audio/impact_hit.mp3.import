@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://c7fwi1ldrp3p0"
-path="res://.godot/imported/impact_hit.mp3-f75eb7c89f547e2b0ee4afb114e715e1.mp3str"
+path="res://.godot/imported/impact_hit.mp3-28adf76c57b5d93ec2f3c8437c1c8263.mp3str"
 
 [deps]
 
-source_file="res://Audio/impact_hit.mp3"
-dest_files=["res://.godot/imported/impact_hit.mp3-f75eb7c89f547e2b0ee4afb114e715e1.mp3str"]
+source_file="res://audio/impact_hit.mp3"
+dest_files=["res://.godot/imported/impact_hit.mp3-28adf76c57b5d93ec2f3c8437c1c8263.mp3str"]
 
 [params]
 

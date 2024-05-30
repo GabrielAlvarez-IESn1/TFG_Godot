@@ -1,9 +1,9 @@
 extends Node
 
 var scenes = {
-    "main": "res://Scenes/MainMenu.tscn",
-    "scoreboard": "res://Scenes/Scoreboard.tscn",
-    "options": "res://Scenes/OptionsMenu.tscn",
-    "game": "res://Scenes/GameScene.tscn",
-    "login": "res://Scenes/Login.tscn",
+    "main": "res://scenes/MainMenu.tscn",
+    "scoreboard": "res://scenes/Scoreboard.tscn",
+    "options": "res://scenes/OptionsMenu.tscn",
+    "game": "res://scenes/GameScene.tscn",
+    "login": "res://scenes/Login.tscn",
 }

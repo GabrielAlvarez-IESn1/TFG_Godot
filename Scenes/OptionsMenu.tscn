@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dncmr53b61gsd"]
 
-[ext_resource type="Script" path="res://Scripts/OptionsMenu.gd" id="1_itfsy"]
-[ext_resource type="Texture2D" uid="uid://cp5arcx8bfd7g" path="res://Assets/Sprites/space_background.png" id="2_grpdt"]
+[ext_resource type="Script" path="res://scripts/OptionsMenu.gd" id="1_jscsc"]
+[ext_resource type="Texture2D" uid="uid://cp5arcx8bfd7g" path="res://assets/Sprites/space_background.png" id="2_pygor"]
 
 [node name="OptionsMenu" type="Control"]
 process_mode = 3
@@ -13,16 +13,17 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_itfsy")
+script = ExtResource("1_jscsc")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BG" type="TextureRect" parent="."]
 modulate = Color(0.666667, 0.666667, 0.666667, 1)
+layout_mode = 0
 offset_right = 960.0
 offset_bottom = 540.0
-texture = ExtResource("2_grpdt")
+texture = ExtResource("2_pygor")
 expand_mode = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="Options" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -37,7 +38,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
 
-[node name="Title" type="Label" parent="VBoxContainer"]
+[node name="Title" type="Label" parent="Options"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
@@ -45,57 +46,118 @@ theme_override_colors/font_color = Color(1, 0.270588, 1, 1)
 theme_override_font_sizes/font_size = 30
 text = "OPTIONS MENU"
 
-[node name="MasterVolumeText" type="Label" parent="VBoxContainer"]
+[node name="MasterVolumeText" type="Label" parent="Options"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
 text = "Master volume"
 
-[node name="MasterVolumeSlider" type="HSlider" parent="VBoxContainer"]
+[node name="MasterVolumeSlider" type="HSlider" parent="Options"]
 layout_mode = 2
 size_flags_vertical = 1
 max_value = 1.0
 step = 0.001
 value = 0.5
 
-[node name="MusicVolumeText" type="Label" parent="VBoxContainer"]
+[node name="MusicVolumeText" type="Label" parent="Options"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
 text = "Music in-game volume"
 
-[node name="MusicVolumeSlider" type="HSlider" parent="VBoxContainer"]
+[node name="MusicVolumeSlider" type="HSlider" parent="Options"]
 layout_mode = 2
 size_flags_vertical = 1
 max_value = 1.0
 step = 0.001
 value = 0.5
 
-[node name="FXVolumeText" type="Label" parent="VBoxContainer"]
+[node name="FXVolumeText" type="Label" parent="Options"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 1
+theme_override_font_sizes/font_size = 20
 text = "Sound effects volume"
 
-[node name="FXVolumeSlider" type="HSlider" parent="VBoxContainer"]
+[node name="FXVolumeSlider" type="HSlider" parent="Options"]
 layout_mode = 2
 size_flags_vertical = 1
 max_value = 1.0
 step = 0.001
 value = 0.5
 
-[node name="BackButton" type="Button" parent="VBoxContainer"]
+[node name="BackButton" type="Button" parent="Options"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "BACK"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="QuitButton" type="Button" parent="Options"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "QUIT"
 
-[connection signal="value_changed" from="VBoxContainer/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
-[connection signal="value_changed" from="VBoxContainer/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
-[connection signal="value_changed" from="VBoxContainer/FXVolumeSlider" to="." method="_on_fx_volume_slider_value_changed"]
-[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[node name="Controls" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -158.0
+offset_right = 272.0
+offset_bottom = 158.0
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Controls"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -134.0
+offset_right = 111.0
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "A & D > Move"
+
+[node name="Label2" type="Label" parent="Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "J > Attack"
+
+[node name="Label3" type="Label" parent="Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "J (twice) -> Attack twice"
+
+[node name="Label4" type="Label" parent="Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "K > Use ability"
+
+[node name="HSeparator" type="HSeparator" parent="Controls/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "R > Fast restart"
+
+[node name="Label6" type="Label" parent="Controls/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "ESC > Pause menu"
+
+[connection signal="value_changed" from="Options/MasterVolumeSlider" to="." method="_on_master_volume_slider_value_changed"]
+[connection signal="value_changed" from="Options/MusicVolumeSlider" to="." method="_on_music_volume_slider_value_changed"]
+[connection signal="value_changed" from="Options/FXVolumeSlider" to="." method="_on_fx_volume_slider_value_changed"]
+[connection signal="pressed" from="Options/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Options/QuitButton" to="." method="_on_quit_button_pressed"]

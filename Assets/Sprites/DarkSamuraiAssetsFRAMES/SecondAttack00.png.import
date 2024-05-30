@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4j5bmn8im0j1"
-path="res://.godot/imported/SecondAttack00.png-5c847d4cc50090e706cdf56e1e81e4d2.ctex"
+path="res://.godot/imported/SecondAttack00.png-03f71aeaca34d642c2d6fe230cc60136.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/SecondAttack00.png"
-dest_files=["res://.godot/imported/SecondAttack00.png-5c847d4cc50090e706cdf56e1e81e4d2.ctex"]
+source_file="res://assets/Sprites/DarkSamuraiAssetsFRAMES/SecondAttack00.png"
+dest_files=["res://.godot/imported/SecondAttack00.png-03f71aeaca34d642c2d6fe230cc60136.ctex"]
 
 [params]
 

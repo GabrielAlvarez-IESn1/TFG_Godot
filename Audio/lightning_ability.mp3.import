@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://bi2an7xnd7ft1"
-path="res://.godot/imported/lightning_ability.mp3-b428060d97d29272b90e7b8ba22def95.mp3str"
+path="res://.godot/imported/lightning_ability.mp3-aa6bc0970c79a4ab13535ec45c227026.mp3str"
 
 [deps]
 
-source_file="res://Audio/lightning_ability.mp3"
-dest_files=["res://.godot/imported/lightning_ability.mp3-b428060d97d29272b90e7b8ba22def95.mp3str"]
+source_file="res://audio/lightning_ability.mp3"
+dest_files=["res://.godot/imported/lightning_ability.mp3-aa6bc0970c79a4ab13535ec45c227026.mp3str"]
 
 [params]
 

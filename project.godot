@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="RUN_RUBY"
-run/main_scene="res://Scenes/MainMenu.tscn"
+run/main_scene="res://scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://Assets/Sprites/icon.svg"
+config/icon="res://assets/Sprites/icon.svg"
 
 [audio]
 
@@ -21,15 +21,15 @@ buses/default_bus_layout=""
 
 [autoload]
 
-GlobalSignals="*res://Scripts/Globals/GlobalSignals.gd"
-GlobalTypes="*res://Scripts/Globals/GlobalTypes.gd"
-SceneManager="*res://Scripts/Globals/SceneManager.gd"
-GlobalMenus="*res://Scripts/Globals/GlobalMenus.gd"
-GlobalScenes="*res://Scripts/Globals/GlobalScenes.gd"
-SilentWolf="*res://Addons/silent_wolf/SilentWolf.gd"
-GlobalSw="*res://Scripts/Globals/GlobalSW.gd"
-GlobalData="*res://Scripts/Globals/GlobalData.gd"
-AudioPlayer="*res://Prefabs/audio_player.tscn"
+GlobalSignals="*res://scripts/Globals/GlobalSignals.gd"
+GlobalTypes="*res://scripts/Globals/GlobalTypes.gd"
+SceneManager="*res://scripts/Globals/SceneManager.gd"
+GlobalMenus="*res://scripts/Globals/GlobalMenus.gd"
+GlobalScenes="*res://scripts/Globals/GlobalScenes.gd"
+SilentWolf="*res://addons/silent_wolf/SilentWolf.gd"
+GlobalSw="*res://scripts/Globals/GlobalSW.gd"
+GlobalData="*res://scripts/Globals/GlobalData.gd"
+GlobalAudioPlayer="*res://prefabs/audio_player.tscn"
 
 [display]
 

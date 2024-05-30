@@ -119,10 +119,10 @@ func _input(event):
 
 			match current_card:
 				GlobalTypes.Cards.FIRE:
-					AudioPlayer.play_FX(fire_fx)
+					GlobalAudioPlayer.play_FX(fire_fx)
 					velocity.y = JUMP_VELOCITY * 1.25
 				GlobalTypes.Cards.LIGHTNING:
-					AudioPlayer.play_FX(lightning_fx)
+					GlobalAudioPlayer.play_FX(lightning_fx)
 					is_dashing = true
 					movement_speed -= 300
 					velocity.x = lerp(velocity.x, velocity.x * 100, 0.1)
@@ -130,13 +130,13 @@ func _input(event):
 					movement_speed += 300
 					is_dashing = false
 				GlobalTypes.Cards.PLANT:
-					AudioPlayer.play_FX(plant_fx)
+					GlobalAudioPlayer.play_FX(plant_fx)
 					is_gliding = true
 					velocity.y = 0
 					await (get_tree().create_timer(1).timeout)
 					is_gliding = false
 				GlobalTypes.Cards.WATER:
-					AudioPlayer.play_FX(water_fx)
+					GlobalAudioPlayer.play_FX(water_fx)
 					is_stomping = true
 					velocity.x = 0
 					velocity.y = 0

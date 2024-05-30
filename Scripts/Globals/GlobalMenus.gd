@@ -1,5 +1,5 @@
 extends Node
 
 var menus = {
-    "pause": "res://Menus/PauseMenu.tscn",
+    "pause": "res://menus/PauseMenu.tscn",
 }

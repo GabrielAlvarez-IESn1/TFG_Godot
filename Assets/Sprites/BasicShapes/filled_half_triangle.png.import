@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dv0j1cehbh70c"
-path="res://.godot/imported/filled_half_triangle.png-1283caacc31b3bd64f9a26e8ec96d41d.ctex"
+path="res://.godot/imported/filled_half_triangle.png-bd21a87205a8f16638b3c7634e933986.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/BasicShapes/filled_half_triangle.png"
-dest_files=["res://.godot/imported/filled_half_triangle.png-1283caacc31b3bd64f9a26e8ec96d41d.ctex"]
+source_file="res://assets/Sprites/BasicShapes/filled_half_triangle.png"
+dest_files=["res://.godot/imported/filled_half_triangle.png-bd21a87205a8f16638b3c7634e933986.ctex"]
 
 [params]
 

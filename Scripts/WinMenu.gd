@@ -1,6 +1,6 @@
 extends Control
 
-@onready var leaderboard_scene = preload("res://Addons/silent_wolf/Scores/Leaderboard.tscn")
+@onready var leaderboard_scene = preload("res://addons/silent_wolf/Scores/Leaderboard.tscn")
 
 func _ready():
 	GlobalSignals.game_state_changed.connect(self._on_game_state_changed)

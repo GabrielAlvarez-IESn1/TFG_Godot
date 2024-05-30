@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d01x8epp0uqd5"
-path="res://.godot/imported/TranquilTunnels.png-929dce681d8a6af79d0090d73f0bbbf4.ctex"
+path="res://.godot/imported/TranquilTunnels.png-29ce9980820a3c6a21dc1a7cda7a9d3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/TileMaps/TranquilTunnels.png"
-dest_files=["res://.godot/imported/TranquilTunnels.png-929dce681d8a6af79d0090d73f0bbbf4.ctex"]
+source_file="res://assets/TileMaps/TranquilTunnels.png"
+dest_files=["res://.godot/imported/TranquilTunnels.png-29ce9980820a3c6a21dc1a7cda7a9d3f.ctex"]
 
 [params]
 

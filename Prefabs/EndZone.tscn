@@ -1,17 +1,62 @@
-[gd_scene load_steps=4 format=3 uid="uid://wxcxdp2wcoca"]
+[gd_scene load_steps=10 format=3 uid="uid://wxcxdp2wcoca"]
 
-[ext_resource type="Script" path="res://Scripts/EndZoneController.gd" id="1_685ob"]
-[ext_resource type="Texture2D" uid="uid://dgfw8rhjdb17t" path="res://Assets/Sprites/icon.svg" id="2_j7od5"]
+[ext_resource type="Script" path="res://scripts/EndZoneController.gd" id="1_685ob"]
+[ext_resource type="Texture2D" uid="uid://c172u5i52efyo" path="res://assets/Sprites/magic_mirror.png" id="2_ukx2v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vub0h"]
+atlas = ExtResource("2_ukx2v")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8ikg"]
+atlas = ExtResource("2_ukx2v")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_078l8"]
+atlas = ExtResource("2_ukx2v")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi5sg"]
+atlas = ExtResource("2_ukx2v")
+region = Rect2(0, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h56so"]
+atlas = ExtResource("2_ukx2v")
+region = Rect2(0, 512, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vxjou"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vub0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8ikg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_078l8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi5sg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h56so")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 10.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bskbu"]
-size = Vector2(36, 48)
+size = Vector2(27, 79)
 
 [node name="EndZone" type="Area2D" groups=["End"]]
 script = ExtResource("1_685ob")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.28125, 0.375)
-texture = ExtResource("2_j7od5")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vxjou")
+animation = &"Idle"
+autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -0.5)
 shape = SubResource("RectangleShape2D_bskbu")

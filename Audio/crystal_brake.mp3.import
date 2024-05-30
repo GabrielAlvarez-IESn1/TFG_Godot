@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cbk4wl8i5cg60"
-path="res://.godot/imported/crystal_brake.mp3-2a3a94c1baf0fba4e49885bc8e3ad2a7.mp3str"
+path="res://.godot/imported/crystal_brake.mp3-9b162fd0cc1b45646402da4a9771a77e.mp3str"
 
 [deps]
 
-source_file="res://Audio/crystal_brake.mp3"
-dest_files=["res://.godot/imported/crystal_brake.mp3-2a3a94c1baf0fba4e49885bc8e3ad2a7.mp3str"]
+source_file="res://audio/crystal_brake.mp3"
+dest_files=["res://.godot/imported/crystal_brake.mp3-9b162fd0cc1b45646402da4a9771a77e.mp3str"]
 
 [params]
 

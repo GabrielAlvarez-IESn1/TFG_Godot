@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ktdm6ma4wwug"
-path="res://.godot/imported/Die08.png-b27bfa95270c4199dd19f3de851179cc.ctex"
+path="res://.godot/imported/Die08.png-7d363215927df046680521829f7a0124.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/Die08.png"
-dest_files=["res://.godot/imported/Die08.png-b27bfa95270c4199dd19f3de851179cc.ctex"]
+source_file="res://assets/Sprites/DarkSamuraiAssetsFRAMES/Die08.png"
+dest_files=["res://.godot/imported/Die08.png-7d363215927df046680521829f7a0124.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cu2nvskgdahk7"
-path="res://.godot/imported/card_fire.png-d630b55aa70d7c17b4f16e04a31b4a3a.ctex"
+path="res://.godot/imported/card_fire.png-751ec9a2aa80619e5bc048b8afaafbfe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/ShielaCards/card_fire.png"
-dest_files=["res://.godot/imported/card_fire.png-d630b55aa70d7c17b4f16e04a31b4a3a.ctex"]
+source_file="res://assets/Sprites/ShielaCards/card_fire.png"
+dest_files=["res://.godot/imported/card_fire.png-751ec9a2aa80619e5bc048b8afaafbfe.ctex"]
 
 [params]
 

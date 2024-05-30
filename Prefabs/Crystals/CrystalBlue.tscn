@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://dy52hmex8kf8c"]
 
-[ext_resource type="Script" path="res://Scripts/CrystalController.gd" id="1_ul2hw"]
-[ext_resource type="Texture2D" uid="uid://bjxxexcvbksmj" path="res://Assets/Sprites/Crystals/idle00.png" id="2_nyvw6"]
-[ext_resource type="Texture2D" uid="uid://bw8nds5khxmtg" path="res://Assets/Sprites/Crystals/idle01.png" id="3_3rt5p"]
-[ext_resource type="Texture2D" uid="uid://bu84sp21f5xr6" path="res://Assets/Sprites/Crystals/idle02.png" id="4_21tof"]
-[ext_resource type="Texture2D" uid="uid://buhnclwlqct6y" path="res://Assets/Sprites/Crystals/idle03.png" id="5_e6oth"]
-[ext_resource type="Texture2D" uid="uid://d3tuv5s8n10uj" path="res://Assets/Sprites/Crystals/idle04.png" id="6_cq1jr"]
-[ext_resource type="Texture2D" uid="uid://ns4ks562t42a" path="res://Assets/Sprites/Crystals/idle05.png" id="7_c8vla"]
+[ext_resource type="Script" path="res://scripts/CrystalController.gd" id="1_ul2hw"]
+[ext_resource type="Texture2D" uid="uid://bjxxexcvbksmj" path="res://assets/Sprites/Crystals/idle00.png" id="2_nyvw6"]
+[ext_resource type="Texture2D" uid="uid://bw8nds5khxmtg" path="res://assets/Sprites/Crystals/idle01.png" id="3_3rt5p"]
+[ext_resource type="Texture2D" uid="uid://bu84sp21f5xr6" path="res://assets/Sprites/Crystals/idle02.png" id="4_21tof"]
+[ext_resource type="Texture2D" uid="uid://buhnclwlqct6y" path="res://assets/Sprites/Crystals/idle03.png" id="5_e6oth"]
+[ext_resource type="Texture2D" uid="uid://d3tuv5s8n10uj" path="res://assets/Sprites/Crystals/idle04.png" id="6_cq1jr"]
+[ext_resource type="Texture2D" uid="uid://ns4ks562t42a" path="res://assets/Sprites/Crystals/idle05.png" id="7_c8vla"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ynpvh"]
 animations = [{
