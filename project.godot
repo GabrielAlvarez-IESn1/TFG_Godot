@@ -25,6 +25,7 @@ GlobalScenes="*res://Scripts/Globals/GlobalScenes.gd"
 SilentWolf="*res://Addons/silent_wolf/SilentWolf.gd"
 GlobalSw="*res://Scripts/Globals/GlobalSW.gd"
 GlobalData="*res://Scripts/Globals/GlobalData.gd"
+AudioPlayer="*res://Scenes/audio_player.tscn"
 
 [display]
 

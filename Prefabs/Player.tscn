@@ -521,7 +521,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0y456")
 animation = &"Spawn"
 autoplay = "Idle"
-frame = 13
+frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
 visible = false

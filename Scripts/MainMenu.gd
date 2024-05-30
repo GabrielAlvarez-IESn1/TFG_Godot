@@ -3,6 +3,7 @@ extends Control
 @onready var leaderboard_scene = preload("res://Addons/silent_wolf/Scores/Leaderboard.tscn")
 
 func _ready():
+	AudioPlayer.play_music_menu()
 	if GlobalData.player_logged_in:
 		$LoginBlocker.hide()
 		$Login/LoggedAs.text = GlobalData.player_data.name

@@ -1,5 +1,5 @@
 @tool
-extends Node2D
+extends Control
 
 const ScoreItem = preload("ScoreItem.tscn")
 const SWLogger = preload("res://addons/silent_wolf/utils/SWLogger.gd")
@@ -18,8 +18,8 @@ func _ready():
 	if ld_name in SilentWolf.Scores.leaderboards:
 		scores = SilentWolf.Scores.leaderboards[ld_name]
 	var local_scores = SilentWolf.Scores.local_scores
-	
-	if len(scores) > 0: 
+
+	if len(scores) > 0:
 		render_board(scores, local_scores)
 	else:
 		# use a signal to notify when the high scores have been returned, and show a "loading" animation until it's the case...
