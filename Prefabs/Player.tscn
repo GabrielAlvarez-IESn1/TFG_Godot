@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=3 uid="uid://cs705xb2e2wpu"]
+[gd_scene load_steps=62 format=3 uid="uid://cs705xb2e2wpu"]
 
 [ext_resource type="Script" path="res://Scripts/PlayerMovement.gd" id="1_copeq"]
 [ext_resource type="Texture2D" uid="uid://b13sbvdxqbwhr" path="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/Fall00.png" id="2_dao4m"]
@@ -48,6 +48,7 @@
 [ext_resource type="Texture2D" uid="uid://cmrjxp6ew50kp" path="res://Assets/Sprites/DarkSamuraiAssetsFRAMES/SecondAttack02.png" id="32_p3jhi"]
 [ext_resource type="AnimationNodeStateMachine" uid="uid://b8cxmilvn0d18" path="res://Animators/PlayerStateAnimator.tres" id="33_ys3hb"]
 [ext_resource type="Script" path="res://Scripts/Hitbox.gd" id="47_dr48a"]
+[ext_resource type="PackedScene" uid="uid://omwosk1a6l4l" path="res://Prefabs/GUI.tscn" id="49_xvaob"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0y456"]
 animations = [{
@@ -521,7 +522,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_0y456")
 animation = &"Spawn"
 autoplay = "Idle"
-frame = 2
+frame = 13
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Player"]]
 visible = false
@@ -582,5 +583,7 @@ drag_right_margin = 0.1
 drag_bottom_margin = 0.0
 editor_draw_limits = true
 editor_draw_drag_margin = true
+
+[node name="GUI" parent="." instance=ExtResource("49_xvaob")]
 
 [connection signal="area_entered" from="HitboxArea" to="HitboxArea" method="_on_area_entered"]

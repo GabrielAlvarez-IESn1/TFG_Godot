@@ -3,8 +3,8 @@ extends AudioStreamPlayer
 const menu_music = preload("res://audio/menu_music.mp3")
 const level_music = preload("res://audio/level_music.mp3")
 
-var music_volume: float = -10.0
-var fx_volume: float = -10.0
+var music_volume: float = linear_to_db(0.5)
+var fx_volume: float = linear_to_db(0.5)
 
 func _play_music(music: AudioStream):
 	if stream == music:

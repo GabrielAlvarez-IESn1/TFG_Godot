@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bd3k5a7t5fqsl"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_41xrh"]
-[ext_resource type="Texture2D" uid="uid://dgfw8rhjdb17t" path="res://Assets/Sprites/icon.svg" id="2_h0wyy"]
+[ext_resource type="Texture2D" uid="uid://cp5arcx8bfd7g" path="res://Assets/Sprites/space_background.png" id="2_i4bub"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -16,7 +16,8 @@ script = ExtResource("1_41xrh")
 layout_mode = 0
 offset_right = 960.0
 offset_bottom = 540.0
-texture = ExtResource("2_h0wyy")
+texture = ExtResource("2_i4bub")
+expand_mode = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -31,6 +32,7 @@ offset_right = 57.5
 offset_bottom = 81.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 20
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -42,18 +44,22 @@ text = "MAIN MENU"
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "START"
 
 [node name="ScoreboardButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "SCOREBOARD"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "OPTIONS"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 text = "QUIT"
 
 [node name="Login" type="Control" parent="."]
@@ -99,8 +105,9 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
-text = "
-LOGIN TO PLAY"
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 15
+text = "YOU MUST LOGIN FIRST TO PLAY"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ScoreboardButton" to="." method="_on_scoreboard_button_pressed"]

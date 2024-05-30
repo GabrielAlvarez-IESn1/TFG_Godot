@@ -20,3 +20,8 @@ res://Scripts/Globals/GlobalMenus.gd
 res://Scripts/CrystalController.gd
 res://Scripts/Globals/GlobalTypes.gd
 res://Scripts/GUIController.gd
+res://default_bus_layout.tres
+res://Scenes/OptionsMenu.tscn
+res://Scripts/OptionsMenu.gd
+res://Prefabs/parallax_background.tscn
+res://Prefabs/audio_player.tscn

@@ -15,6 +15,10 @@ run/main_scene="res://Scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Assets/Sprites/icon.svg"
 
+[audio]
+
+buses/default_bus_layout=""
+
 [autoload]
 
 GlobalSignals="*res://Scripts/Globals/GlobalSignals.gd"
@@ -25,13 +29,14 @@ GlobalScenes="*res://Scripts/Globals/GlobalScenes.gd"
 SilentWolf="*res://Addons/silent_wolf/SilentWolf.gd"
 GlobalSw="*res://Scripts/Globals/GlobalSW.gd"
 GlobalData="*res://Scripts/Globals/GlobalData.gd"
-AudioPlayer="*res://Scenes/audio_player.tscn"
+AudioPlayer="*res://Prefabs/audio_player.tscn"
 
 [display]
 
 window/size/viewport_width=960
 window/size/viewport_height=540
 window/stretch/mode="canvas_items"
+window/vsync/vsync_mode=0
 window/defaults/default_clear_color=Color(0.184314, 0.270588, 0.313726, 1)
 
 [importer_defaults]

@@ -1,0 +1,95 @@
+[gd_scene load_steps=7 format=3 uid="uid://cxpbwu6k8mdhg"]
+
+[ext_resource type="Texture2D" uid="uid://c6hi1vqwtc830" path="res://Assets/Sprites/SpaceBackground/parallax-space-backgound.png" id="1_nfgvy"]
+[ext_resource type="Texture2D" uid="uid://26cr52lm2chi" path="res://Assets/Sprites/SpaceBackground/parallax-space-ring-planet.png" id="2_bjwmt"]
+[ext_resource type="Texture2D" uid="uid://cgs4gw0br135s" path="res://Assets/Sprites/SpaceBackground/parallax-space-stars.png" id="3_4ig87"]
+[ext_resource type="Texture2D" uid="uid://206rr7fywph7" path="res://Assets/Sprites/SpaceBackground/parallax-space-far-planets.png" id="3_atnpt"]
+[ext_resource type="Texture2D" uid="uid://xrkqnsntlpj0" path="res://Assets/Sprites/SpaceBackground/parallax-space-big-planet.png" id="4_pf7ne"]
+
+[sub_resource type="GDScript" id="GDScript_3h6kg"]
+script/source = "extends ParallaxBackground
+
+func _process(delta):
+	scroll_offset.x -= 40 * delta
+"
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_offset = Vector2(450, 0)
+script = SubResource("GDScript_3h6kg")
+
+[node name="Parallax-space-background" type="Sprite2D" parent="."]
+position = Vector2(480, 270)
+scale = Vector2(3.52941, 3.375)
+texture = ExtResource("1_nfgvy")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.05, 0.05)
+motion_mirroring = Vector2(960, 540)
+
+[node name="Parallax-space-ring-planet" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(493, 99)
+scale = Vector2(1.06373, 1.06373)
+texture = ExtResource("2_bjwmt")
+
+[node name="Parallax-space-ring-planet2" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(860, 303)
+rotation = 0.364191
+scale = Vector2(1.13151, 1.13151)
+texture = ExtResource("2_bjwmt")
+
+[node name="Parallax-space-ring-planet3" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(191, 353)
+rotation = -0.679118
+scale = Vector2(1.20362, 1.20362)
+texture = ExtResource("2_bjwmt")
+
+[node name="Parallax-space-stars" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(439.5, 221)
+rotation = -2.09963
+scale = Vector2(1.3125, 1.3125)
+texture = ExtResource("3_4ig87")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(960, 540)
+
+[node name="Parallax-space-far-planets" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(613, 412)
+scale = Vector2(1.41875, 1.41875)
+texture = ExtResource("3_atnpt")
+
+[node name="Parallax-space-far-planets2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(232, 118)
+rotation = -0.628847
+scale = Vector2(1.07518, 1.07518)
+texture = ExtResource("3_atnpt")
+
+[node name="Parallax-space-stars" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(474, 260)
+rotation = -2.90257
+scale = Vector2(2.45625, 2.45625)
+texture = ExtResource("3_4ig87")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(960, 540)
+
+[node name="parallax-space-big-planet" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(123, 220)
+texture = ExtResource("4_pf7ne")
+
+[node name="parallax-space-big-planet2" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(741, 114)
+scale = Vector2(1.92816, 1.92816)
+texture = ExtResource("4_pf7ne")
+
+[node name="parallax-space-big-planet3" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(339, 446)
+scale = Vector2(1.54741, 1.54741)
+texture = ExtResource("4_pf7ne")
+
+[node name="Parallax-space-stars" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(477.4, 270)
+scale = Vector2(3.375, 3.375)
+texture = ExtResource("3_4ig87")
