@@ -18,6 +18,7 @@ scroll_offset = Vector2(450, 0)
 script = SubResource("GDScript_3h6kg")
 
 [node name="Parallax-space-background" type="Sprite2D" parent="."]
+modulate = Color(0.333333, 0.333333, 0.333333, 1)
 position = Vector2(480, 270)
 scale = Vector2(3.52941, 3.375)
 texture = ExtResource("1_nfgvy")
@@ -28,23 +29,27 @@ motion_scale = Vector2(0.05, 0.05)
 motion_mirroring = Vector2(960, 540)
 
 [node name="Parallax-space-ring-planet" type="Sprite2D" parent="ParallaxLayer3"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 position = Vector2(493, 99)
 scale = Vector2(1.06373, 1.06373)
 texture = ExtResource("2_bjwmt")
 
 [node name="Parallax-space-ring-planet2" type="Sprite2D" parent="ParallaxLayer3"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 position = Vector2(860, 303)
 rotation = 0.364191
 scale = Vector2(1.13151, 1.13151)
 texture = ExtResource("2_bjwmt")
 
 [node name="Parallax-space-ring-planet3" type="Sprite2D" parent="ParallaxLayer3"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 position = Vector2(191, 353)
 rotation = -0.679118
 scale = Vector2(1.20362, 1.20362)
 texture = ExtResource("2_bjwmt")
 
 [node name="Parallax-space-stars" type="Sprite2D" parent="ParallaxLayer3"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 position = Vector2(439.5, 221)
 rotation = -2.09963
 scale = Vector2(1.3125, 1.3125)
@@ -55,17 +60,20 @@ motion_scale = Vector2(0.1, 0.1)
 motion_mirroring = Vector2(960, 540)
 
 [node name="Parallax-space-far-planets" type="Sprite2D" parent="ParallaxLayer2"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 position = Vector2(613, 412)
 scale = Vector2(1.41875, 1.41875)
 texture = ExtResource("3_atnpt")
 
 [node name="Parallax-space-far-planets2" type="Sprite2D" parent="ParallaxLayer2"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 position = Vector2(232, 118)
 rotation = -0.628847
 scale = Vector2(1.07518, 1.07518)
 texture = ExtResource("3_atnpt")
 
 [node name="Parallax-space-stars" type="Sprite2D" parent="ParallaxLayer2"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 position = Vector2(474, 260)
 rotation = -2.90257
 scale = Vector2(2.45625, 2.45625)
@@ -76,20 +84,24 @@ motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(960, 540)
 
 [node name="parallax-space-big-planet" type="Sprite2D" parent="ParallaxLayer"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 position = Vector2(123, 220)
 texture = ExtResource("4_pf7ne")
 
 [node name="parallax-space-big-planet2" type="Sprite2D" parent="ParallaxLayer"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 position = Vector2(741, 114)
 scale = Vector2(1.92816, 1.92816)
 texture = ExtResource("4_pf7ne")
 
 [node name="parallax-space-big-planet3" type="Sprite2D" parent="ParallaxLayer"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 position = Vector2(339, 446)
 scale = Vector2(1.54741, 1.54741)
 texture = ExtResource("4_pf7ne")
 
 [node name="Parallax-space-stars" type="Sprite2D" parent="ParallaxLayer"]
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
 position = Vector2(477.4, 270)
 scale = Vector2(3.375, 3.375)
 texture = ExtResource("3_4ig87")
