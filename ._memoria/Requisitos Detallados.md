@@ -1,7 +1,14 @@
 ## Requisitos del Cliente
 
 ### Creación de Assets
-El cliente ha especificado la necesidad de diseñar sprites para personajes, enemigos y niveles, así como la creación de sonidos como música de fondo y efectos de sonido para una experiencia más inmersiva. Esto permitirá a los jugadores interactuar con un entorno visualmente atractivo y auditivamente rico.
+El cliente ha especificado la necesidad de diseñar sprites para el personaje, nivel, cristales y cartas de habilidades, así como la creación de sonidos como música de fondo y efectos de sonido para una experiencia más inmersiva. Esto permitirá a los jugadores interactuar con un entorno visualmente atractivo y auditivamente rico.
+
+- **Personaje**: El personaje debe ser un samurái llamado Ruby. Este debe tener una espada. Además, debe tener animaciones básicas, como caminar, saltar, caer y atacar.
+- **Nivel**: Los colores de los segmentos del nivel deben ir a corde con los critales que los contienen, blanco en el caso de varios, combinando así los colores.
+- **Cristales**: Los critales deben tener una animación de rotación. El color de los mismos debe ir a corde con las habilidades que proporcionan.
+- **Cartas de habilidades**: Las cartas deben contener un icono de su elemento y el color que le corresponde.
+- **Música de fondo**: La música de fondo debe ser animada, que se reproduzca en bucle, y no tenga cambios drásticos. En el caso de la música del nivel, debe de causar tensión.
+- **Efectos de sonido**: Los efectos de sonido deben ser adecuados, si se usa una carta de fuego, reproducir un sonido de fuego.
 
 ### Mecánicas del juego
 El juego debe incluir las siguientes mecánicas de juego:
