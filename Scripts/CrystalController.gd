@@ -1,4 +1,3 @@
-class_name CrystalController
 extends Area2D
 
 # preload audio files
