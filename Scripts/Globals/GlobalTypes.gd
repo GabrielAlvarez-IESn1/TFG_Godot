@@ -1,17 +1,19 @@
 extends Node
 
+# Crystal types
 enum Crystals {
     NONE,
-    FIRE,
-    LIGHTNING,
-    PLANT,
-    WATER,
+    FIRE, # RED
+    LIGHTNING, # YELLOW
+    PLANT, # GREEN
+    WATER, # BLUE
 }
 
+# Card types
 enum Cards {
     NONE,
-    FIRE,
-    LIGHTNING,
-    PLANT,
-    WATER,
+    FIRE, # RED
+    LIGHTNING, # YELLOW
+    PLANT, # GREEN
+    WATER, # BLUE
 }

@@ -1,5 +1,6 @@
 extends Node
 
+# GAME STATES
 enum GameState {
 	MAIN_MENU,
 	SCOREBOARD,
@@ -9,15 +10,19 @@ enum GameState {
 	WIN,
 }
 
+# First scene to load
 var game_state = GameState.MAIN_MENU
 
 func _ready():
+	# Connect signals
 	GlobalSignals.game_state_changed.connect(self._on_game_state_changed)
 
 func change_game_state(state):
+	# Change the game state
 	GlobalSignals.game_state_changed.emit(state)
 
 func _on_game_state_changed(state):
+	# Change the scene
 	match state:
 		GameState.MAIN_MENU:
 			get_tree().change_scene_to_file(GlobalScenes.scenes["main"])

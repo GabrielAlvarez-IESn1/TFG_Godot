@@ -1,5 +1,6 @@
 extends Node
 
+# Scenes paths used in the game
 var scenes = {
     "main": "res://scenes/MainMenu.tscn",
     "scoreboard": "res://scenes/Scoreboard.tscn",
