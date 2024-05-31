@@ -1,11 +1,11 @@
+res://scripts/PlayerMovement.gd
 res://scenes/GameScene.tscn
-res://animators/PlayerStateAnimator.tres
 res://addons/silent_wolf/assets/themes/sw_theme.tres
+res://animators/PlayerStateAnimator.tres
 res://scenes/MainMenu.tscn
 res://scenes/OptionsMenu.tscn
-res://scripts/PlayerMovement.gd
-res://prefabs/parallax_background.tscn
 res://prefabs/Player.tscn
 res://prefabs/GUI.tscn
-res://prefabs/Crystals/CrystalGreen.tscn
+res://prefabs/parallax_background.tscn
 res://prefabs/Crystals/CrystalYellow.tscn
+res://scripts/Globals/GlobalTypes.gd

@@ -51,7 +51,7 @@ func _ready():
 	set_physics_process(false) # Disable the physics process
 	await spawnTimer.timeout # Wait for the player to spawn
 	animation_tree.set("parameters/conditions/is_spawned", true) # Set the player's animation
- 	set_physics_process(true) # Enable the physics process
+	set_physics_process(true) # Enable the physics process
 
 	GlobalSignals.connect("crystal_taken", self.on_crystal_taken) # Connect the crystal taken signal
 
@@ -135,12 +135,14 @@ func _input(event):
 				GlobalTypes.Cards.FIRE: # Double jump
 					GlobalAudioPlayer.play_FX(fire_fx)
 					velocity.y = JUMP_VELOCITY * 1.25
+					current_card = GlobalTypes.Cards.NONE
 
 				GlobalTypes.Cards.LIGHTNING: # Dash
 					GlobalAudioPlayer.play_FX(lightning_fx)
 					is_dashing = true
 					movement_speed -= 300
 					velocity.x = lerp(velocity.x, velocity.x * 100, 0.1)
+					current_card = GlobalTypes.Cards.NONE
 					await (get_tree().create_timer(0.1).timeout)
 					movement_speed += 300
 					is_dashing = false
@@ -149,6 +151,7 @@ func _input(event):
 					GlobalAudioPlayer.play_FX(plant_fx)
 					is_gliding = true
 					velocity.y = 0
+					current_card = GlobalTypes.Cards.NONE
 					await (get_tree().create_timer(1).timeout)
 					is_gliding = false
 
@@ -157,12 +160,11 @@ func _input(event):
 					is_stomping = true
 					velocity.x = 0
 					velocity.y = 0
+					current_card = GlobalTypes.Cards.NONE
 					await (get_tree().create_timer(0.1).timeout)
 					velocity.y = lerp(0, 10000, 0.3)
 					await (get_tree().create_timer(0.3).timeout)
 					is_stomping = false
-
-		current_card = GlobalTypes.Cards.NONE # Remove the card
 
 	# Handle jump buffer
 	if event.is_action_pressed("WASD_SPACEBAR"):
