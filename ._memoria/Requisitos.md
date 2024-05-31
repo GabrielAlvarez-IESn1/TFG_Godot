@@ -6,7 +6,7 @@ El cliente ha especificado los siguientes requisitos:
 ### Creación de Assets
 Diseñar sprites para personajes, enemigos y niveles. Además, se requiere la creación de sonidos como música de fondo y efectos de sonido para una experiencia más inmersiva.
 
-### Mecánicas de Movimiento
+### Mecánicas del juego
 Implementar las siguientes mecanicas de juego:
 - Movimiento básico
     - Movimientos horizontales
