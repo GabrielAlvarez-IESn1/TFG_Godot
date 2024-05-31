@@ -44,17 +44,18 @@ El juego debe incluir los siguientes menús:
 
 #### Menú de Login
 - **Nombre**: El jugador debe poder ingresar su nombre.
+- **Aceptar**: El jugador podrá confirmar su identificación.
 - **Atrás**: El jugador puede regresar al menú principal.
-- **Salir**: El jugador puede salir del juego.
 
 #### Menú Principal
 - **Login**: El jugador podrá identificarse.
 - **Empezar**: El jugador puede comenzar el juego.
-- **Opciones**: El jugador puede acceder a las opciones del juego.
 - **Ranking**: El jugador puede ver la tabla de clasificación.
+- **Opciones**: El jugador puede acceder a las opciones del juego.
 - **Salir**: El jugador puede salir del juego.
 
 #### Menú de Opciones
+- **Controles**: El jugador podrá ver la lista de controles del juego.
 - **Volumen General**: El jugador puede ajustar el volumen general del juego.
 - **Volumen de Música del Nivel**: El jugador puede ajustar el volumen de la música del nivel.
 - **Volumen de Efectos de Sonido**: El jugador puede ajustar el volumen de los efectos de sonido.
@@ -63,7 +64,7 @@ El juego debe incluir los siguientes menús:
 
 #### Menú de Ranking
 - **Tabla de Clasificación**: El jugador puede ver la tabla de clasificación global.
-- **Atrás**: El jugador puede regresar al menú principal.
+- **Cerrar tabla**: El jugador puede regresar al menú principal.
 
 #### Menús Durante el Juego
 - **Pausa**: El jugador puede pausar el juego.
@@ -74,7 +75,6 @@ El juego debe incluir los siguientes menús:
   - **Reiniciar**: El jugador puede reiniciar el nivel.
   - **Ranking**: El jugador puede ver la tabla de clasificación.
   - **Menú Principal**: El jugador puede regresar al menú principal.
-  - **Salir**: El jugador puede salir del juego.
 
 ### Pruebas
 Es fundamental realizar pruebas exhaustivas de las mecánicas de juego para garantizar su funcionamiento correcto y equilibrado. Además, se debe evaluar el rendimiento del juego para optimizar su fluidez y evitar problemas de carga o lag que puedan afectar la experiencia del jugador.

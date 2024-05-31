@@ -51,7 +51,8 @@ text = "START"
 [node name="ScoreboardButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "SCOREBOARD"
+text = "LEADERBOARD
+"
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2

@@ -26,6 +26,6 @@ Tu objetivo en "RUN RUBY!" es llegar a la meta lo mas rápido posible, superando
 ### Recomendaciones:
 - Explora cada nivel para descubrir secretos y desafíos adicionales.
 - Practica tus habilidades para mejorar tu tiempo y puntaje en el juego.
-- ¡Diviértete y disfruta de la experiencia única que ofrece "Nombre del Juego"!
+- ¡Diviértete y disfruta de la experiencia única que ofrece "RUN RUBY!"!
 
-¡Ahora estás listo para sumergirte en la acción y la diversión de "Nombre del Juego"! ¡Que la aventura comience!
+¡Ahora estás listo para sumergirte en la acción y la diversión de "RUN RUBY!"! ¡Que la aventura comience!
