@@ -170,11 +170,6 @@ func _input(event):
 	if event.is_action_pressed("WASD_SPACEBAR"):
 		jump_buffer_timer = JUMP_BUFFER_TIME # Start the jump buffer timer
 
-	# DEBUG: Teleport the player to the mouse position
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		var mouse_position = get_global_mouse_position()
-		global_position = mouse_position
-
 	# Restart the scene when R is pressed
 	if event.is_action_pressed("WASD_RESTART"):
 		get_tree().reload_current_scene() # Reload the current scene

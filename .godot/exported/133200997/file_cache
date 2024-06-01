@@ -1,5 +1,5 @@
 res://default_bus_layout.tres::2604b13e7ae182b8f06a60d005cf78c6::1717094094::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
-res://addons/silent_wolf/assets/themes/sw_theme.tres::9f490cb41840e93acedce3b12b9fc155::1717188411::res://.godot/exported/133200997/export-bc9dd7aa59b5ffa2b9a55341309da9eb-sw_theme.res
+res://addons/silent_wolf/assets/themes/sw_theme.tres::9f490cb41840e93acedce3b12b9fc155::1717273861::res://.godot/exported/133200997/export-bc9dd7aa59b5ffa2b9a55341309da9eb-sw_theme.res
 res://addons/silent_wolf/Auth/ConfirmEmail.tscn::487c786e4c4bd7b28b52d4a26404306b::1717100613::res://.godot/exported/133200997/export-28544a8c03e488ef0d8a7f5c3a91dd6f-ConfirmEmail.scn
 res://addons/silent_wolf/Auth/Login.tscn::8f165c9c00726f0400b44ebbd6f721a1::1717100613::res://.godot/exported/133200997/export-d5f9092806241c7fb5a9dceed691d492-Login.scn
 res://addons/silent_wolf/Auth/Register.tscn::36d9a1329ad7dbdfcf59fe9d043e5f05::1717100613::res://.godot/exported/133200997/export-a55a9fa6c86252c19b97cde63d684563-Register.scn
@@ -11,7 +11,7 @@ res://addons/silent_wolf/examples/CustomLeaderboards/SmallScoreItem.tscn::75f550
 res://addons/silent_wolf/examples/CustomLeaderboards/TimeBasedLboards.tscn::49a40705ff2ab8f9592119c41ac9f0d5::1717100613::res://.godot/exported/133200997/export-af217e4e84c4e9606322e28c6af2e578-TimeBasedLboards.scn
 res://addons/silent_wolf/Scores/Leaderboard.tscn::0d14e2afc3200e7633ca778c4cfc337d::1717100613::res://.godot/exported/133200997/export-1fec6129a6986beaff10338b08a9472f-Leaderboard.scn
 res://addons/silent_wolf/Scores/ScoreItem.tscn::318fd15589fc34cdc8f1384db079c4b9::1707164611::res://.godot/exported/133200997/export-37da5df818ade421e9d80e15751e286b-ScoreItem.scn
-res://animators/PlayerStateAnimator.tres::a75397376c5c5be7120d8942b24214ff::1717188411::res://.godot/exported/133200997/export-6110e92b1437a4c29a983d13722d0c30-PlayerStateAnimator.res
+res://animators/PlayerStateAnimator.tres::a75397376c5c5be7120d8942b24214ff::1717273861::res://.godot/exported/133200997/export-6110e92b1437a4c29a983d13722d0c30-PlayerStateAnimator.res
 res://menus/PauseMenu.tscn::ced99e93bff54ca6d476b6b222130e88::1717100727::res://.godot/exported/133200997/export-06aa2174e3a7295e377177196a342902-PauseMenu.scn
 res://menus/WinMenu.tscn::459149feea79c5726023116e1c09969f::1717100727::res://.godot/exported/133200997/export-866606e966e879a8f4752732c65c5280-WinMenu.scn
 res://prefabs/Crystals/CrystalBase.tscn::b17eda20bb222aa4361555a5dac3dba1::1717100722::res://.godot/exported/133200997/export-e985ee841bc0718297f7a91be8163c91-CrystalBase.scn
@@ -25,8 +25,8 @@ res://prefabs/GUI.tscn::ba2a34359a58e93ba2bf17050c26660c::1717181839::res://.god
 res://prefabs/parallax_background.tscn::ef93003417ed5d458d2b3320447d6115::1717181839::res://.godot/exported/133200997/export-cc230ac5a567bf6f27c18a67d6feff45-parallax_background.scn
 res://prefabs/Player.tscn::12d595082cef83e19d602f478a0cd1bb::1717181839::res://.godot/exported/133200997/export-48f5d981daf771aa484bbba9dfc3c30a-Player.scn
 res://scenes/Levels/Level0.tscn::b7426e77d4f56e97a28fb511c4ba3291::1717100714::res://.godot/exported/133200997/export-f464c8a4a3a960e7b7e5c86a8a92be73-Level0.scn
-res://scenes/GameScene.tscn::00df02b7e91f8b5c58a28a8f2e2ae4f1::1717188497::res://.godot/exported/133200997/export-15024b5764635ac5d5eac182fd173676-GameScene.scn
+res://scenes/GameScene.tscn::0aca9c829a15ac9be4e3fce4f951861b::1717273964::res://.godot/exported/133200997/export-15024b5764635ac5d5eac182fd173676-GameScene.scn
 res://scenes/Login.tscn::4085053eb95cae4c6d33d0d564956e43::1717181839::res://.godot/exported/133200997/export-742156800d8cc4d9995ea5ff4351d464-Login.scn
-res://scenes/MainMenu.tscn::152e123eeff7334990607a7682f6637f::1717188481::res://.godot/exported/133200997/export-23c8b2a48d59a0cd018bd8ad5ce7794c-MainMenu.scn
+res://scenes/MainMenu.tscn::152e123eeff7334990607a7682f6637f::1717273964::res://.godot/exported/133200997/export-23c8b2a48d59a0cd018bd8ad5ce7794c-MainMenu.scn
 res://scenes/OptionsMenu.tscn::4056feba077ce1b7944dd6e262d35e4c::1717181839::res://.godot/exported/133200997/export-f274810c5d37629ca4490a04dacee34a-OptionsMenu.scn
 res://default_bus_layout .tres::7d1b1ff7a8f34dc3841e57906539d492::1717168560::res://.godot/exported/133200997/export-54a961389d6f270e02e7337612d14f24-default_bus_layout .res

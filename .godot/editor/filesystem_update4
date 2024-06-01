@@ -1,5 +1,5 @@
+res://scripts/PlayerMovement.gd
 res://scenes/GameScene.tscn
-res://addons/silent_wolf/assets/themes/sw_theme.tres
 res://animators/PlayerStateAnimator.tres
+res://addons/silent_wolf/assets/themes/sw_theme.tres
 res://scenes/MainMenu.tscn
-res://scripts/CrystalController.gd
